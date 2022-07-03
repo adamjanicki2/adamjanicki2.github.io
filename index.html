@@ -1,118 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Adam Janicki</title>
-    <meta name="description" content="Adam Janicki's website" />
-    <meta name="author" content="Adam Janicki" />
-    <meta property="og:title" content="Adam Janicki's Website" />
-    <meta property="og:image" content="/apple-touch-icon.png" />
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link href="%PUBLIC_URL%/AdamJanickiResume.pdf" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tachyons@4/css/tachyons.min.css"
-    />
-  </head>
-  <body>
-    <div class="flex flex-column" style="min-height: 100vh">
-      <div class="gradient pa3">
-        <h1 class="tc f1 fw5 ma0">Adam Janicki</h1>
+<head>
+  <meta charset="utf-8">
+  <title>Adam Janicki</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Adam Janicki" name="keywords">
+  <meta content="Adam Janicki's personal website" name="description">
+
+  <!-- Icons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">Adam Janicki</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#reviews">Reviews</a>
+          </li>
+        </ul>
       </div>
-      <div class="About-container">
-        <div class="flex pa4"><img src="me.png" class="br-100" width="320px" height="320px"/></div>
-        <div class="f3 fw3 ph5 pb4">
-          <div class="tc">
-            Hi! My name is <span class="b">Adam Janicki</span> 😄
-          </div>
-          <br />
-          <div class="tc">I'm a junior at MIT studying Computer Science 🖥</div>
-          <br />
-          <div class="tc">
-            Starting in May 2022, I'll be working for
-            <a class="dim" rel="noreferrer" target="_blank" href="https://stripe.com/">
-              Stripe</a
-            >
-            as a Software Engineering Intern 📈
-          </div>
-          <br />
-          <div class="tc">
-            Recently, I've been working as a lab assistant for
-            <a
-              class="dim"
-              rel="noreferrer"
-              target="_blank"
-              href="http://student.mit.edu/catalog/m6a.html#6.031"
-              >6.031</a
-            >
-            (Software Construction) at MIT 🔨
-          </div>
-          <br />
-          <div class="tc">
-            Outside of Academics, I'm a member of the
-            <a
-              class="dim"
-              rel="noreferrer"
-              target="_blank"
-              href="https://mitathletics.com/sports/mens-swimming-and-diving"
-              >MIT Swim Team</a
-            >, and an
-            <a
-              class="dim"
-              rel="noreferrer"
-              target="_blank"
-              href="https://www.adamovies.com/"
-              >avid reviewer</a
-            >
-            of movies and TV Shows 🎬
-          </div>
-          <br />
-          <div class="tc">
-            Thanks for stopping by; I'd love to connect! Feel free to reach out
-            to me by
-            <a class="dim" rel="noreferrer" href="mailto:ajanicki@mit.edu"
-              >email</a
-            >
-            📬
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/IMG_2614.JPG)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4">Hi! I'm Adam Janicki</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">Movie Critic,Lego Builder,Amateur Gamer,Roller Coaster Enthusiast,Swimmer,Software Engineer</span><strong class="text-slider"></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me -->
+
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/me.png" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Adam Janicki</span></p>
+                      <p><span class="title-s">Role: </span> <span>Software Engineer</span></p>
+                      <p><span class="title-s">Email: </span> <span>adamjanicki2@gmail.com</span></p>
+                      <p><span class="title-s">Phone: </span> <span>(703) 884-7877</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Languages</p>
+                  <span>JAVASCRIPT & TYPESCRIPT</span> <span class="pull-right">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>REACT</span> <span class="pull-right">95%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>JAVA & C/C++</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>PYTHON</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      About me
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Welcome! I'm Adam Janicki, a senior studying Computer Science at MIT!
+                    This is my personal website, and is somewhat a cross between a portfolio
+                    and informal website. Either way it's a mess. Did I bootstrap this site? 
+                    You bet I did.
+                  </p>
+                  <p class="lead">
+                    I'm primarily interested in web development, specifically React. Speed and performance
+                    are also super fun, especially after taking 6.172 as a junior. This Summer I'm working
+                    as a frontend developer at Stripe.
+                  </p>
+                  <p class="lead">
+                    Outside of work related things, I love to swim or do anything active. I also run a movie 
+                    review website called Adamovies. My favorite movie of all time is Interstellar, but I have 
+                    a soft spot for sci-fi in general.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="gradient flex flex-row items-center justify-center pa3">
-        <a
-          class="mr3"
-          rel="noreferrer"
-          target="_blank"
-          href="https://www.adamovies.com/"
-          ><img class="dim" src="adamovies.svg" width="54px" height="54px"/>
-        </a>
-        <a
-          class="mh3"
-          rel="noreferrer"
-          target="_blank"
-          href="https://www.linkedin.com/in/adam-janicki-093859197/"
-          ><i class="fa fa-linkedin-square fa-4x black dim"></i
-        ></a>
-        <a
-          class="mh3"
-          rel="noreferrer"
-          target="_blank"
-          href="https://github.com/adamjanicki2/"
-          ><i class="fa fa-github fa-4x black dim"></i
-        ></a>
-        <a
-          class="mh3"
-          rel="noreferrer"
-          target="_blank"
-          href="./AdamJanickiResume.pdf"
-          ><i class="fa fa-file-pdf-o fa-4x black dim"></i
-        ></a>
-        <a class="ml3" rel="noreferrer" href="mailto:ajanicki@mit.edu"
-          ><i class="fa fa-envelope-square fa-4x black dim"></i
-        ></a>
+    </div>
+  </section>
+
+  <!--/ Section Portfolio Star /-->
+  <section id="projects" class="portfolio-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Projects
+            </h3>
+            <p class="subtitle-a">
+              Here are a few of fun side projects I've been working on!
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/adamovies_display.png" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/adamovies_display.png" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Adamovies</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/trackify_display.png" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/trackify_display.png" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Trackify</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/wordle_display.png" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/wordle_display.png" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Wordle Solver</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
-  <script src="https://use.fontawesome.com/6af07d612d.js"></script>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="blog-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Reviews
+            </h3>
+            <p class="subtitle-a">
+              These are some of my favorite reviews I've written!
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 review-card-margin">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a target="_blank" href="https://www.adamovies.com/review/Alien"><img src="img/alien.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Sci-Fi</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a target="_blank" href="https://www.adamovies.com/review/Alien">Alien</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Adam Janicki</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 review-card-margin">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a target="_blank" href="https://www.adamovies.com/review/Tenet"><img src="img/tenet.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Action</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a target="_blank" href="https://www.adamovies.com/review/Tenet">Tenet</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Adam Janicki</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 review-card-margin">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a target="_blank" href="https://www.adamovies.com/review/Pulp_Fiction" alt="" class="img-fluid"><img src="img/pulp_fiction.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Crime</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a target="_blank" href="https://www.adamovies.com/review/Pulp_Fiction">Pulp Fiction</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Adam Janicki</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/IMG_2668.JPG)">
+    <div class="overlay-mf"></div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">&copy; Copyright <strong>Adam Janicki</strong>. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
 </html>

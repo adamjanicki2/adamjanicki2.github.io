@@ -17,7 +17,7 @@ const CONTACTS = [
     icon: faLinkedin,
     href: "https://www.linkedin.com/in/adam-janicki-093859197/",
     title: "LinkedIn",
-    description: "Connect with me on LinkedIn",
+    description: "Connect with me",
   },
   {
     icon: faEnvelope,

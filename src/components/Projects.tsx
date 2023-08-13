@@ -12,27 +12,51 @@ type Props = {
 const PROJECTS = [
   {
     title: "Adamovies",
-    img: "/adamovies.jpg",
+    img: "/adamovies.png",
     href: "https://adamovies.com",
-    date: "January 2021",
+    date: "Jan 2021 - present",
     description:
       "A movie review website that I created immediately after learning React back in January, 2021. Think Roger Ebert but without the talent.",
   },
   {
-    title: "Trackify",
-    img: "/trackify.jpg",
-    href: "https://adamjanicki2.github.io/trackify/",
-    date: "July 2022",
+    title: "OnTask",
+    img: "/on-task.png",
+    href: "/on-task",
+    date: "Sep 2023",
     description:
-      "Back when the Spotify API was all the rage, I tried my hand at playing around with it.",
+      "A super simple and lightweight task/list manager that uses Markdown to format your tasks.",
+  },
+  {
+    title: "8-Bit Art",
+    img: "/8bitart.png",
+    href: "/8bitart",
+    date: "Aug 2023",
+    description:
+      "A simple pixel art creator that I made for fun, useful for making retro Favicons and more.",
+  },
+  {
+    title: "Portfolio",
+    img: "/portfolio.png",
+    href: "#home",
+    date: "Aug 2023",
+    description:
+      "This website! I made it as an HQ for my resources and info, and just wanted to build something from scratch for fun.",
   },
   {
     title: "Vercel MERN Template",
-    img: "/skeleton.jpg",
+    img: "/skeleton.png",
     href: "https://vercel-mern-skeleton.vercel.app/",
-    date: "November 2022",
+    date: "Nov 2022",
     description:
       "It's super hard to deploy a MERN stack application anywhere for free (especially Vercel), so I made a template to make it easier.",
+  },
+  {
+    title: "Trackify",
+    img: "/trackify.png",
+    href: "/trackify",
+    date: "Jul 2022",
+    description:
+      "Back when the Spotify API was all the rage, I tried my hand at playing around with it.",
   },
 ] as const;
 
@@ -42,8 +66,8 @@ const Project = ({ title, img, description, href, date }: Props) => {
       <a
         className="flex flex-column accent-hover"
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={href.startsWith("#") ? undefined : "_blank"}
+        rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
       >
         <img
           src={img}

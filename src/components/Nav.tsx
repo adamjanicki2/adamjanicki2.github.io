@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Spin as Hamburger } from "hamburger-react";
+import { useWatchScroll } from "@adamjanicki/core-ui";
 
-type Props = {
-  scrolled: boolean;
-};
+const SCROLL_THRESHOLD = 20;
 
-const Nav = ({ scrolled }: Props) => {
+const Nav = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const onScroll = () => {
+    const scrollY = window.scrollY;
+    if (!scrolled && scrollY > SCROLL_THRESHOLD) setScrolled(true);
+    else if (scrolled && scrollY <= SCROLL_THRESHOLD) setScrolled(false);
+  };
+  useWatchScroll(onScroll);
   const closeMenu = () => setOpen(false);
 
   const Navlink = ({ title }: { title: string }) => (

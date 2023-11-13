@@ -1,4 +1,4 @@
-import Secret from "./Secret";
+import Secret from "src/components/Secret";
 
 const Home = () => (
   <div

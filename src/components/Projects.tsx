@@ -1,5 +1,5 @@
-import Secret from "./Secret";
-import Section from "./Section";
+import Secret from "src/components/Secret";
+import Section from "src/components/Section";
 
 type Props = {
   title: string;
@@ -19,12 +19,20 @@ const PROJECTS = [
       "A movie review website that I created immediately after learning React back in January, 2021. Think Roger Ebert but without the talent.",
   },
   {
+    title: "MDocs",
+    img: "/mdocs.png",
+    href: "https://mdocs.adamjanicki.xyz",
+    date: "Oct 2023",
+    description:
+      "A super simple and lightweight document manager that uses Markdown to create your documents, nice for writing documentation for your projects.",
+  },
+  {
     title: "OnTask",
     img: "/on-task.png",
     href: "/on-task",
     date: "Sep 2023",
     description:
-      "A super simple and lightweight task/list manager that uses Markdown to format your tasks.",
+      "Tiny local storage based task & list manager that uses Markdown to format your ideas.",
   },
   {
     title: "8-Bit Art",

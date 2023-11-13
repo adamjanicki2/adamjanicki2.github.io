@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Section from "./Section";
+import Section from "src/components/Section";
 import { faGithubAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope, faFileAlt } from "@fortawesome/free-regular-svg-icons";
-import Secret from "./Secret";
+import Secret from "src/components/Secret";
 
 type ContactInfo = {
   icon: IconProp;

@@ -34,6 +34,15 @@ a {
   color: inherit;
 }
 
+a:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent) !important;
+  opacity: 1 !important;
+}
+
 .bg-accent {
   background-color: var(--accent);
 }
@@ -44,10 +53,6 @@ a {
 
 .accent-hover {
   transition: color 0.3s ease-in-out;
-}
-
-.accent-hover:hover {
-  color: var(--accent);
 }
 
 .nav {
@@ -78,12 +83,6 @@ a {
 .navlink-hover * {
   transition: border-color 0.3s ease-in-out;
   border-bottom: 2px solid transparent;
-}
-
-@media (hover: hover) {
-  .navlink-hover:hover * {
-    border-bottom: 2px solid var(--accent);
-  }
 }
 
 .navlink-active * {
@@ -119,7 +118,7 @@ a {
 }
 
 .section-title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.75rem;
 }
 
@@ -128,17 +127,18 @@ a {
   margin-right: auto;
 }
 
-.dim:hover {
-  opacity: 0.85;
-}
-
 .hidden-text {
   color: transparent;
+  transition: color 0.3s ease-in-out;
 }
 
 .hidden-text::selection {
   color: white;
   background-color: var(--accent);
+}
+
+.hidden-text:focus-visible {
+  color: inherit;
 }
 
 .bordering {

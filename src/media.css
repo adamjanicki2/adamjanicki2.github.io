@@ -18,6 +18,21 @@ li {
   width: 33%;
 }
 
+@media (hover: hover) {
+  .dim:hover {
+    opacity: 0.85;
+  }
+  .accent-hover:hover {
+    color: var(--accent);
+  }
+  .navlink-hover:hover * {
+    border-bottom: 2px solid var(--accent);
+  }
+  .hidden-text:hover {
+    color: inherit;
+  }
+}
+
 @media only screen and (max-width: 1000px) and (min-width: 768px) {
   :root {
     --nav-padding: 4rem;

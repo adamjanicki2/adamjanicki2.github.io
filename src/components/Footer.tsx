@@ -1,4 +1,4 @@
-import Secret from "./Secret";
+import Secret from "src/components/Secret";
 
 const Footer = () => (
   <footer className="mt5 footer flex flex-column items-center justify-between">
@@ -7,8 +7,10 @@ const Footer = () => (
         slug="The_Silence_of_the_Lambs"
         text="I'm having an old friend for dinner."
       />
-      <p className="ma0" style={{ fontSize: "10px" }}>
+      <p className="ma0 tr" style={{ fontSize: "10px" }}>
         Did someone say... hidden movie quotes?
+        <br />
+        Hint: hit CMD+A or use tab to navigate!
       </p>
     </div>
 

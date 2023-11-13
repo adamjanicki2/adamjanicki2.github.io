@@ -1,6 +1,6 @@
-import ExternalLink from "./ExternalLink";
-import Secret from "./Secret";
-import Section from "./Section";
+import ExternalLink from "src/components/ExternalLink";
+import Secret from "src/components/Secret";
+import Section from "src/components/Section";
 
 const About = () => (
   <Section
@@ -21,9 +21,13 @@ const About = () => (
         randomly, wow! <br />
         <br />
         I'm primarily interested in web development, but I also enjoy
-        performance engineering, and making code run fast, specifically
-        exploiting parallelism and multithreading. This Summer I'm working as a
-        full-stack developer at Stripe.
+        performance engineering, and making code run fast, which is why I'm a TA
+        for MIT's famous{" "}
+        <ExternalLink href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/">
+          6.172/6.106
+        </ExternalLink>
+        . This Summer, I worked as a full-stack developer at Stripe, where I'll
+        be returning full-time next Summer.
         <br />
         <br />
         Outside of work related things, I'm an ex-swimmer, and I love to bike,

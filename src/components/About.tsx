@@ -13,7 +13,7 @@ const About = () => (
     secretAlign="end"
   >
     <div className="h-about">
-      <img src="/me.png" alt="" className="br2 mr3 about-img mb2" />
+      <img src="/images/me.png" alt="" className="br2 mr3 about-img mb2" />
       <p style={{ lineHeight: 1.5 }} className="f4 fw3 ma0 pa0">
         Welcome! I'm Adam Janicki, a Masters student studying Computer Science
         at MIT! You've somehow managed to stumble across my personal website,

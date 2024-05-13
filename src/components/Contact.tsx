@@ -33,9 +33,9 @@ const CONTACTS = [
   },
   {
     icon: faFileAlt,
-    href: "/AdamJanickiResume.pdf",
+    href: "/files/resume.pdf",
     title: "Resume",
-    description: "Download my resume",
+    description: "View my resume",
   },
 ] as const;
 

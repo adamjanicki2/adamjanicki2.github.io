@@ -10,7 +10,7 @@ const Footer = () => (
       <p className="ma0 tr" style={{ fontSize: "10px" }}>
         Did someone say... hidden movie quotes?
         <br />
-        Hint: hit CMD+A or use tab to navigate!
+        Hint: use ⌘A or tab!
       </p>
     </div>
 

@@ -4,7 +4,7 @@ import Home from "src/components/Home";
 import Projects from "src/components/Projects";
 import Contact from "src/components/Contact";
 import Footer from "src/components/Footer";
-import { useScrollToHash } from "@adamjanicki/core-ui";
+import { useScrollToHash } from "@adamjanicki/ui";
 
 const App = () => {
   useScrollToHash();

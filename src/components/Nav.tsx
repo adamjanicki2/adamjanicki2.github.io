@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Spin as Hamburger } from "hamburger-react";
-import { useWatchScroll } from "@adamjanicki/core-ui";
+import { useWatchScroll } from "@adamjanicki/ui";
 
 const SCROLL_THRESHOLD = 20;
 

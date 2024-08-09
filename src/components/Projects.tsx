@@ -11,12 +11,12 @@ type Props = {
 
 const PROJECTS = [
   {
-    title: "Adamovies",
-    img: "adamovies.png",
-    href: "https://adamovies.com",
-    date: "Jan 2021 - present",
+    title: "React Playground",
+    img: "playground.png",
+    href: "/react-playground",
+    date: "Aug 2024",
     description:
-      "A movie review website that I created immediately after learning React back in January, 2021. Think Roger Ebert but without the talent.",
+      "A dynamically-compiled sandbox for playing around with React components and hooks, useful for quick playtesting.",
   },
   {
     title: "QR Scanner",
@@ -74,6 +74,14 @@ const PROJECTS = [
     description:
       "Back when the Spotify API was all the rage, I tried my hand at playing around with it.",
   },
+  {
+    title: "Adamovies",
+    img: "adamovies.png",
+    href: "https://adamovies.com",
+    date: "Jan 2021",
+    description:
+      "A movie review website that I created immediately after learning React back in January, 2021. Think Roger Ebert but without the talent.",
+  },
 ] as const;
 
 const Project = ({ title, img, description, href, date }: Props) => {
@@ -92,7 +100,7 @@ const Project = ({ title, img, description, href, date }: Props) => {
           className="ba br2 b--moon-gray"
         />
         <h2 className="ma0 mv1 f3 fw6">{title}</h2>
-        <p className="ma0 mb1 dark-gray f6 fw3">{date}</p>
+        <p className="ma0 mb1 dark-gray f6 fw5">{date}</p>
         <p className="ma0 black fw4">{description}</p>
       </a>
     </div>

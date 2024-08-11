@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Spin as Hamburger } from "hamburger-react";
 import { useWatchScroll } from "@adamjanicki/ui";
+import { ReactComponent as Logo } from "src/img/logo.svg";
 
 const SCROLL_THRESHOLD = 20;
 
@@ -34,8 +35,9 @@ const Nav = () => {
       }`}
     >
       <div className="flex items-center justify-between bar-container">
-        <a className="nav-title" href="#home">
-          Adam Janicki
+        <a className="nav-title flex items-center" href="#home">
+          <span className="desktop">Adam Janicki</span>
+          <Logo height={32} className="mobile" />
         </a>
         <div className="mobile">
           <Hamburger
@@ -47,7 +49,8 @@ const Nav = () => {
         </div>
       </div>
       <ul
-        className={`flex items-center mobile-hide`}
+        className="flex items-center desktop"
+        // force display to be open on mobile when hamburger is toggled
         style={open ? { display: "flex" } : undefined}
       >
         <Navlink title="Home" />

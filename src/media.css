@@ -64,7 +64,7 @@ li {
   .mobile {
     display: block;
   }
-  .mobile-hide {
+  .desktop {
     display: none;
   }
   .bar-container {
@@ -112,7 +112,7 @@ li {
   .mobile {
     display: block;
   }
-  .mobile-hide {
+  .desktop {
     display: none;
   }
   .bar-container {

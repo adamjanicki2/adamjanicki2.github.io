@@ -48,7 +48,7 @@ const ContactLink = ({ icon, href, title, description }: ContactInfo) => {
       rel="noopener noreferrer"
     >
       <FontAwesomeIcon icon={icon} size="5x" />
-      <h3 className="f3 fw6 ma0 pa0">{title}</h3>
+      <h1 className="f3 fw6 ma0 pa0">{title}</h1>
       <p className="f6 fw3 ma0 pa0 dark-gray">{description}</p>
     </a>
   );

@@ -164,6 +164,7 @@ const About = () => {
           options={Object.keys(bios)}
           value={bio}
           onChange={(e) => setBio(e.target.value as BioKey)}
+          aria-label="bio select"
         />
       </div>
       <div className="h-about">

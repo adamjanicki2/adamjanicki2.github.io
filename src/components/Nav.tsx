@@ -35,7 +35,11 @@ const Nav = () => {
       }`}
     >
       <div className="flex items-center justify-between bar-container">
-        <a className="nav-title flex items-center" href="#home">
+        <a
+          className="nav-title flex items-center"
+          href="#home"
+          aria-label="home"
+        >
           <span className="desktop">Adam Janicki</span>
           <Logo height={32} className="mobile" />
         </a>
@@ -45,6 +49,7 @@ const Nav = () => {
             onToggle={() => setOpen(!open)}
             direction="right"
             size={32}
+            label="toggle menu"
           />
         </div>
       </div>

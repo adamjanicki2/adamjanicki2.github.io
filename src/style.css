@@ -23,6 +23,7 @@ nav {
   position: fixed;
   width: 100%;
   transition: all 0.4s ease-in-out;
+  z-index: 10;
 }
 
 ul {
@@ -59,13 +60,13 @@ a:focus-visible {
 .nav {
   background-color: inherit;
   color: var(--nav-text);
-  padding: 1.6rem var(--nav-padding);
+  padding: 1.25rem var(--nav-padding);
 }
 
 .nav-scrolled {
   background-color: #fff;
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-  padding: 1.3rem var(--nav-padding);
+  padding: 0.75rem var(--nav-padding);
 }
 
 .nav-title {

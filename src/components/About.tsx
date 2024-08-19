@@ -168,7 +168,7 @@ const About = () => {
         />
       </div>
       <div className="h-about">
-        <img src="/images/me.png" alt="" className="br2 mr3 about-img mb2" />
+        <img src="/images/me.webp" alt="" className="br2 mr3 about-img mb2" />
         <p style={{ lineHeight: 1.5 }} className="f4 fw3 ma0 pa0">
           {bios[bio]}
         </p>

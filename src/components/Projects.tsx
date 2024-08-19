@@ -12,7 +12,7 @@ type Props = {
 const PROJECTS = [
   {
     title: "React Playground",
-    img: "playground.png",
+    img: "playground.webp",
     href: "/react-playground",
     date: "Aug 2024",
     description:
@@ -20,7 +20,7 @@ const PROJECTS = [
   },
   {
     title: "QR Scanner",
-    img: "qr.png",
+    img: "qr.webp",
     href: "/qr",
     date: "Mar 2024",
     description:
@@ -28,7 +28,7 @@ const PROJECTS = [
   },
   {
     title: "MDocs",
-    img: "mdocs.png",
+    img: "mdocs.webp",
     href: "https://mdocs.adamjanicki.xyz",
     date: "Oct 2023",
     description:
@@ -36,7 +36,7 @@ const PROJECTS = [
   },
   {
     title: "OnTask",
-    img: "on-task.png",
+    img: "on-task.webp",
     href: "/on-task",
     date: "Sep 2023",
     description:
@@ -44,7 +44,7 @@ const PROJECTS = [
   },
   {
     title: "8-Bit Art",
-    img: "8bitart.png",
+    img: "8bitart.webp",
     href: "/8bitart",
     date: "Aug 2023",
     description:
@@ -52,7 +52,7 @@ const PROJECTS = [
   },
   {
     title: "Portfolio",
-    img: "portfolio.png",
+    img: "portfolio.webp",
     href: "#home",
     date: "Aug 2023",
     description:
@@ -60,7 +60,7 @@ const PROJECTS = [
   },
   {
     title: "Vercel MERN Template",
-    img: "skeleton.png",
+    img: "skeleton.webp",
     href: "https://vercel-mern-skeleton.vercel.app/",
     date: "Nov 2022",
     description:
@@ -68,7 +68,7 @@ const PROJECTS = [
   },
   {
     title: "Trackify",
-    img: "trackify.png",
+    img: "trackify.webp",
     href: "/trackify",
     date: "Jul 2022",
     description:
@@ -76,7 +76,7 @@ const PROJECTS = [
   },
   {
     title: "Adamovies",
-    img: "adamovies.png",
+    img: "adamovies.webp",
     href: "https://adamovies.com",
     date: "Jan 2021",
     description:

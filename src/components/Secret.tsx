@@ -1,3 +1,5 @@
+import "src/css/secret.css";
+
 type Props = {
   slug: string;
   text: string;

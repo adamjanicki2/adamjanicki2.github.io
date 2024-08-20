@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Spin as Hamburger } from "hamburger-react";
 import { useWatchScroll } from "@adamjanicki/ui";
 import { ReactComponent as Logo } from "src/img/logo.svg";
+import "src/css/nav.css";
 
 const SCROLL_THRESHOLD = 20;
 

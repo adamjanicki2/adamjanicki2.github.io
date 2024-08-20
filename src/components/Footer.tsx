@@ -1,4 +1,5 @@
 import Secret from "src/components/Secret";
+import "src/css/footer.css";
 
 const Footer = () => (
   <footer className="mt5 footer flex flex-column items-center justify-between">

@@ -1,0 +1,8 @@
+.section {
+  padding: var(--nav-padding) var(--nav-padding) 0 var(--nav-padding);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2.75rem;
+}

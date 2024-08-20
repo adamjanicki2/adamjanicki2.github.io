@@ -1,0 +1,45 @@
+nav {
+  position: fixed;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+  z-index: 10;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav {
+  background-color: inherit;
+  color: var(--nav-text);
+  padding: 1.25rem var(--nav-padding);
+}
+
+.nav-scrolled {
+  background-color: #fff;
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+  padding: 0.75rem var(--nav-padding);
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.navlink {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  display: inline-block;
+}
+
+.navlink-hover * {
+  transition: border-color 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+
+.navlink-active * {
+  border-bottom: 2px solid var(--accent);
+}

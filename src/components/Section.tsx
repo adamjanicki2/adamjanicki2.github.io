@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import "src/css/section.css";
+
 type Props = {
   id: string;
   title: string;

@@ -1,20 +1,17 @@
 import { useState } from "react";
-import { Spin as Hamburger } from "hamburger-react";
-import { useWatchScroll } from "@adamjanicki/ui";
+import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
+import { useScroll } from "@adamjanicki/ui";
 import { ReactComponent as Logo } from "src/img/logo.svg";
 import "src/css/nav.css";
 
 const SCROLL_THRESHOLD = 20;
 
 const Nav = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const onScroll = () => {
-    const scrollY = window.scrollY;
-    if (!scrolled && scrollY > SCROLL_THRESHOLD) setScrolled(true);
-    else if (scrolled && scrollY <= SCROLL_THRESHOLD) setScrolled(false);
-  };
-  useWatchScroll(onScroll);
+
+  const { scrollY } = useScroll();
+  const scrolled = scrollY >= SCROLL_THRESHOLD;
+
   const closeMenu = () => setOpen(false);
 
   const Navlink = ({ title }: { title: string }) => (
@@ -46,11 +43,14 @@ const Nav = () => {
         </a>
         <div className="mobile">
           <Hamburger
-            toggled={open}
-            onToggle={() => setOpen(!open)}
+            open={open}
+            onClick={() => setOpen(!open)}
             direction="right"
-            size={32}
-            label="toggle menu"
+            size={44}
+            style={{ margin: 2 }}
+            duration={0.4}
+            aria-label="toggle menu"
+            lineHeight={3}
           />
         </div>
       </div>

@@ -1,7 +1,7 @@
 {
   "name": "adamjanicki.xyz",
   "version": "2.0.0",
-  "homepage": "https://adamjanicki2.github.io/",
+  "homepage": "https://adamjanicki.xyz/",
   "dependencies": {
     "@adamjanicki/ui": "latest",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -9,7 +9,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

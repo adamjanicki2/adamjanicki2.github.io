@@ -50,6 +50,7 @@ const Nav = () => {
             style={{ margin: 2 }}
             duration={0.4}
             aria-label="toggle menu"
+            lineHeight={3}
           />
         </div>
       </div>

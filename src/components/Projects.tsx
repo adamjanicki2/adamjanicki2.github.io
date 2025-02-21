@@ -1,7 +1,8 @@
+import { UnstyledLink } from "src/components/Link";
 import Secret from "src/components/Secret";
 import Section from "src/components/Section";
 
-type Props = {
+type ProjectType = {
   title: string;
   img: string;
   description: string;
@@ -9,10 +10,34 @@ type Props = {
   date: string;
 };
 
-const PROJECTS = [
+const PROJECTS: readonly ProjectType[] = [
+  {
+    title: "Ping",
+    img: "ping",
+    description:
+      "A little tool I built for pinging endpoints or sites. I'm most proud of the JSON formatter I custom built.",
+    href: "/ping",
+    date: "Feb 2025",
+  },
+  {
+    title: "Arcade",
+    img: "arcade",
+    description:
+      "JavaScript games were my first step into coding about 5 years ago, and I wanted to make a centralized arcade.",
+    href: "/arcade",
+    date: "Sep 2024",
+  },
+  {
+    title: "React Library",
+    img: "ui",
+    description:
+      "I like doing everything from scratch, and it's about time I have my own library so I don't have to copy over components anymore.",
+    href: "/ui",
+    date: "Jul 2024",
+  },
   {
     title: "React Playground",
-    img: "playground.webp",
+    img: "playground",
     href: "/react-playground",
     date: "Aug 2024",
     description:
@@ -20,7 +45,7 @@ const PROJECTS = [
   },
   {
     title: "QR Scanner",
-    img: "qr.webp",
+    img: "qr",
     href: "/qr",
     date: "Mar 2024",
     description:
@@ -28,7 +53,7 @@ const PROJECTS = [
   },
   {
     title: "MDocs",
-    img: "mdocs.webp",
+    img: "mdocs",
     href: "https://mdocs.adamjanicki.xyz",
     date: "Oct 2023",
     description:
@@ -36,7 +61,7 @@ const PROJECTS = [
   },
   {
     title: "OnTask",
-    img: "on-task.webp",
+    img: "on-task",
     href: "/on-task",
     date: "Sep 2023",
     description:
@@ -44,7 +69,7 @@ const PROJECTS = [
   },
   {
     title: "8-Bit Art",
-    img: "8bitart.webp",
+    img: "8bitart",
     href: "/8bitart",
     date: "Aug 2023",
     description:
@@ -52,7 +77,7 @@ const PROJECTS = [
   },
   {
     title: "Portfolio",
-    img: "portfolio.webp",
+    img: "portfolio",
     href: "#home",
     date: "Aug 2023",
     description:
@@ -60,7 +85,7 @@ const PROJECTS = [
   },
   {
     title: "Vercel MERN Template",
-    img: "skeleton.webp",
+    img: "skeleton",
     href: "https://vercel-mern-skeleton.vercel.app/",
     date: "Nov 2022",
     description:
@@ -68,7 +93,7 @@ const PROJECTS = [
   },
   {
     title: "Trackify",
-    img: "trackify.webp",
+    img: "trackify",
     href: "/trackify",
     date: "Jul 2022",
     description:
@@ -76,33 +101,32 @@ const PROJECTS = [
   },
   {
     title: "Adamovies",
-    img: "adamovies.webp",
+    img: "adamovies",
     href: "https://adamovies.com",
     date: "Jan 2021",
     description:
       "A movie review website that I created immediately after learning React back in January, 2021. Think Roger Ebert but without the talent.",
   },
-] as const;
+];
 
-const Project = ({ title, img, description, href, date }: Props) => {
+const Project = ({ title, img, description, href, date }: ProjectType) => {
   return (
     <div className="pa2 mv2 pc-w">
-      <a
+      <UnstyledLink
         className="flex flex-column accent-hover"
-        href={href}
-        target={href.startsWith("#") ? undefined : "_blank"}
-        rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
+        to={href}
+        forceExternal={!href.startsWith("#")}
       >
         <img
-          src={`/images/${img}`}
+          src={`/images/projects/${img}.webp`}
           alt=""
-          style={{ maxHeight: 400 }}
+          style={{ maxHeight: 420 }}
           className="ba br2 b--moon-gray"
         />
         <h2 className="ma0 mv1 f3 fw6">{title}</h2>
         <p className="ma0 mb1 dark-gray f6 fw5">{date}</p>
         <p className="ma0 black fw4">{description}</p>
-      </a>
+      </UnstyledLink>
     </div>
   );
 };

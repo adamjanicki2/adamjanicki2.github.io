@@ -3,6 +3,7 @@ import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
 import { useScroll } from "@adamjanicki/ui";
 import { ReactComponent as Logo } from "src/img/logo.svg";
 import "src/css/nav.css";
+import { UnstyledLink } from "src/components/Link";
 
 const SCROLL_THRESHOLD = 20;
 
@@ -16,13 +17,13 @@ const Nav = () => {
 
   const Navlink = ({ title }: { title: string }) => (
     <li className="nav-item">
-      <a
+      <UnstyledLink
         className={`navlink ${scrolled ? "navlink-hover" : "dim"}`}
-        href={`#${title.toLowerCase()}`}
+        to={`#${title.toLowerCase()}`}
         onClick={closeMenu}
       >
         <span>{title}</span>
-      </a>
+      </UnstyledLink>
     </li>
   );
 
@@ -33,14 +34,14 @@ const Nav = () => {
       }`}
     >
       <div className="flex items-center justify-between bar-container">
-        <a
+        <UnstyledLink
           className="nav-title flex items-center"
-          href="#home"
+          to="#home"
           aria-label="home"
         >
           <span className="desktop">Adam Janicki</span>
           <Logo height={32} className="mobile" />
-        </a>
+        </UnstyledLink>
         <div className="mobile">
           <Hamburger
             open={open}

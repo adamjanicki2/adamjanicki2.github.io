@@ -4,6 +4,7 @@ import { faGithubAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope, faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import Secret from "src/components/Secret";
+import { UnstyledLink } from "src/components/Link";
 
 type ContactInfo = {
   icon: IconProp;
@@ -41,16 +42,15 @@ const CONTACTS = [
 
 const ContactLink = ({ icon, href, title, description }: ContactInfo) => {
   return (
-    <a
+    <UnstyledLink
       className="flex flex-column ma2 items-center accent-hover"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      to={href}
+      forceExternal
     >
       <FontAwesomeIcon icon={icon} size="5x" />
       <h1 className="f3 fw6 ma0 pa0">{title}</h1>
       <p className="f6 fw3 ma0 pa0 dark-gray">{description}</p>
-    </a>
+    </UnstyledLink>
   );
 };
 

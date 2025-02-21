@@ -1,3 +1,4 @@
+import { UnstyledLink } from "src/components/Link";
 import Secret from "src/components/Secret";
 import Section from "src/components/Section";
 
@@ -111,12 +112,7 @@ const PROJECTS: readonly ProjectType[] = [
 const Project = ({ title, img, description, href, date }: ProjectType) => {
   return (
     <div className="pa2 mv2 pc-w">
-      <a
-        className="flex flex-column accent-hover"
-        href={href}
-        target={href.startsWith("#") ? undefined : "_blank"}
-        rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
-      >
+      <UnstyledLink className="flex flex-column accent-hover" to={href}>
         <img
           src={`/images/projects/${img}.webp`}
           alt=""
@@ -126,7 +122,7 @@ const Project = ({ title, img, description, href, date }: ProjectType) => {
         <h2 className="ma0 mv1 f3 fw6">{title}</h2>
         <p className="ma0 mb1 dark-gray f6 fw5">{date}</p>
         <p className="ma0 black fw4">{description}</p>
-      </a>
+      </UnstyledLink>
     </div>
   );
 };

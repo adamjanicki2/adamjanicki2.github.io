@@ -1,3 +1,4 @@
+import { UnstyledLink } from "@adamjanicki/ui";
 import "src/css/secret.css";
 
 type Props = {
@@ -6,14 +7,12 @@ type Props = {
 };
 
 const Secret = ({ slug, text }: Props) => (
-  <a
-    href={`https://adamovies.com/review/${slug}`}
+  <UnstyledLink
+    to={`https://adamovies.com/review/${slug}`}
     className="hidden-text f7 i Hey, inspecting element is cheating!"
-    target="_blank"
-    rel="noopener noreferrer"
   >
     "{text}"
-  </a>
+  </UnstyledLink>
 );
 
 export default Secret;

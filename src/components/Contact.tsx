@@ -45,6 +45,7 @@ const ContactLink = ({ icon, href, title, description }: ContactInfo) => {
     <UnstyledLink
       className="flex flex-column ma2 items-center accent-hover"
       to={href}
+      forceExternal
     >
       <FontAwesomeIcon icon={icon} size="5x" />
       <h1 className="f3 fw6 ma0 pa0">{title}</h1>

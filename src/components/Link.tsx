@@ -5,11 +5,16 @@ import {
 } from "@adamjanicki/ui";
 import { classNames } from "@adamjanicki/ui/functions";
 
-type Props = React.ComponentProps<typeof UiUnstyledLink>;
+type Props = React.ComponentProps<typeof UiUnstyledLink> & {
+  forceExternal?: boolean;
+};
 
-const processProps = (props: Props): Props => {
+const processProps = ({
+  forceExternal,
+  ...props
+}: Props): Omit<Props, "forceExternal"> => {
   const internal = props.to.startsWith("/") || props.to.startsWith("#");
-  if (!internal) {
+  if (!internal || forceExternal) {
     props = { ...props, rel: "noopener noreferrer", target: "_blank" };
   }
 

@@ -112,7 +112,11 @@ const PROJECTS: readonly ProjectType[] = [
 const Project = ({ title, img, description, href, date }: ProjectType) => {
   return (
     <div className="pa2 mv2 pc-w">
-      <UnstyledLink className="flex flex-column accent-hover" to={href}>
+      <UnstyledLink
+        className="flex flex-column accent-hover"
+        to={href}
+        forceExternal={!href.startsWith("#")}
+      >
         <img
           src={`/images/projects/${img}.webp`}
           alt=""

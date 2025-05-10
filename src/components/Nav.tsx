@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
 import { useScroll } from "@adamjanicki/ui";
-import { ReactComponent as Logo } from "src/img/logo.svg";
+import Logo from "src/img/logo.svg?react";
 import "src/css/nav.css";
 import { UnstyledLink } from "src/components/Link";
 

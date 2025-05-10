@@ -20,7 +20,7 @@ const Footer = () => (
         text="This Is Ripley, Last Survivor Of The Nostromo...Signing Off."
         slug="Alien"
       />
-      <p className="ma0 f7 fw6 white">Cambridge, Massachusetts, 03.14.2020</p>
+      <p className="ma0 f7 fw6 white">Cambridge, Massachusetts, 03.14.20</p>
     </div>
   </footer>
 );

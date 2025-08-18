@@ -1,21 +1,25 @@
+import { Box } from "@adamjanicki/ui";
 import Secret from "src/components/Secret";
 import "src/css/home.css";
 
 const Home = () => (
-  <div
+  <Box
     id="home"
     className="marquee flex flex-column items-center justify-between white"
   >
-    <div />
+    <Box />
     <h1 className="home-welcome tc">Hi, I'm Adam.</h1>
-    <div className="flex w-100 justify-between pa2">
+    <Box
+      layout={{ axis: "x", justify: "between", padding: "m" }}
+      className="w-100"
+    >
       <Secret
-        slug="Star_Wars:_Episode_III_-_Revenge_of_the_Sith"
+        slug="star-wars-episode-iii-revenge-of-the-sith"
         text="Hello there!"
       />
       <p className="ma0 f7 fw6">Big Sur, California, 08.06.22</p>
-    </div>
-  </div>
+    </Box>
+  </Box>
 );
 
 export default Home;

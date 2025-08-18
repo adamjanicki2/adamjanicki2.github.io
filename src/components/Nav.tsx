@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { useScroll } from "@adamjanicki/ui";
+import { Box, UnstyledLink, useScroll } from "@adamjanicki/ui";
 import Logo from "src/img/logo.svg?react";
 import "src/css/nav.css";
-import { UnstyledLink } from "src/components/Link";
 
 const SCROLL_THRESHOLD = 20;
 
@@ -33,28 +32,29 @@ const Nav = () => {
         scrolled || open ? "-scrolled" : ""
       }`}
     >
-      <div className="flex items-center justify-between bar-container">
+      <Box
+        layout={{ axis: "x", align: "center", justify: "between" }}
+        className="bar-container"
+      >
         <UnstyledLink
           className="nav-title flex items-center"
           to="#home"
           aria-label="home"
         >
-          <span className="desktop">Adam Janicki</span>
-          <Logo height={32} className="mobile" />
+          <Logo height={32} />
         </UnstyledLink>
-        <div className="mobile">
+        <Box className="mobile">
           <Hamburger
             open={open}
             onClick={() => setOpen(!open)}
             direction="right"
             size={44}
             style={{ margin: 2 }}
-            duration={0.4}
             aria-label="toggle menu"
             lineHeight={3}
           />
-        </div>
-      </div>
+        </Box>
+      </Box>
       <ul
         className="flex items-center desktop"
         // force display to be open on mobile when hamburger is toggled

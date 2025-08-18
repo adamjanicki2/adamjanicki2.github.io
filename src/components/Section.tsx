@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { Box } from "@adamjanicki/ui";
+import { ReactNode } from "react";
 import "src/css/section.css";
 
 type Props = {
@@ -19,12 +20,12 @@ const Section = ({
   secretAlign,
 }: Props) => (
   <section className="section">
-    <div className={`flex justify-${secretAlign}`}>{secret}</div>
+    <Box layout={{ axis: "x", justify: secretAlign }}>{secret}</Box>
     <h1 id={id} className="section-title tc ma0 pa0">
       {title}
     </h1>
     <p className="tc ma0 pa1">{description}</p>
-    <div
+    <Box
       style={{ width: 50, height: 5 }}
       className="m-auto mt2 mb3 bg-accent"
     />

@@ -1,7 +1,7 @@
 :root {
   --nav-text: white;
   --nav-padding: 5rem;
-  --accent: #0070ff;
+  --accent: var(--aui-link-color);
 }
 
 html {
@@ -17,20 +17,6 @@ body {
   overscroll-behavior: none;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:focus:not(:focus-visible) {
-  outline: none !important;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--accent) !important;
-  opacity: 1 !important;
-}
-
 .bg-accent {
   background-color: var(--accent);
 }
@@ -40,7 +26,7 @@ a:focus-visible {
 }
 
 .accent-hover {
-  transition: color 0.3s ease-in-out;
+  transition: color var(--aui-default-transition);
 }
 
 .m-auto {

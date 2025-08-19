@@ -223,7 +223,7 @@ const About = () => {
       >
         <p className="fw5 mr2">Viewing bio from:</p>
         <Select
-          options={Object.keys(bios)}
+          options={Object.keys(bios).reverse()}
           value={bio}
           onChange={(e) => setBio(e.target.value as Bio)}
           aria-label="bio select"

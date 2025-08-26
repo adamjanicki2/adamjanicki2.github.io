@@ -43,9 +43,6 @@ li {
   :root {
     --nav-padding: 2.5rem;
   }
-  .marquee {
-    background-attachment: scroll;
-  }
   .pc-w {
     width: 80%;
   }
@@ -90,9 +87,6 @@ li {
 @media only screen and (max-width: 500px) {
   :root {
     --nav-padding: 1.5rem;
-  }
-  .marquee {
-    background-attachment: scroll;
   }
   .pc-w {
     width: 90%;

@@ -112,7 +112,8 @@ const PROJECTS: readonly ProjectType[] = [
 const Project = ({ title, img, description, to, date }: ProjectType) => {
   return (
     <UnstyledLink
-      className="flex flex-column accent-hover pa3 pc-w"
+      layout={{ axis: "y", padding: "m" }}
+      className="accent-hover pc-w"
       to={to}
       external={!to.startsWith("#")}
     >

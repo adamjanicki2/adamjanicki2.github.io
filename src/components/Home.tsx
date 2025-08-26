@@ -5,13 +5,13 @@ import "src/css/home.css";
 const Home = () => (
   <Box
     id="home"
-    className="marquee flex flex-column items-center justify-between white"
+    className="marquee white"
+    layout={{ axis: "y", align: "center", justify: "between" }}
   >
     <Box />
     <h1 className="home-welcome tc">Hi, I'm Adam.</h1>
     <Box
-      layout={{ axis: "x", justify: "between", padding: "m" }}
-      className="w-100"
+      layout={{ axis: "x", justify: "between", padding: "m", width: "full" }}
     >
       <Secret
         slug="star-wars-episode-iii-revenge-of-the-sith"

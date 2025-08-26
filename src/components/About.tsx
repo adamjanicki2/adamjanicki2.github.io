@@ -6,8 +6,8 @@ import Section from "src/components/Section";
 const bios = {
   "Summer 2021": (
     <>
-      Hi! My name is <span className="b">Adam Janicki</span>, and I'm a junior
-      at MIT studying Computer Science and Engineering (Course 6-3).
+      Hi! My name is <strong>Adam Janicki</strong>, and I'm a junior at MIT
+      studying Computer Science and Engineering (Course 6-3).
       <br />
       <br />
       Recently, I've been working as a Software Developer Intern for{" "}
@@ -75,7 +75,7 @@ const bios = {
       <br />
       <br />
       Thanks for stopping by; I'd love to connect! Feel free to reach out to me
-      by
+      by{" "}
       <Link to="mailto:ajanicki@mit.edu" external>
         email
       </Link>{" "}
@@ -218,10 +218,15 @@ const About = () => {
       secretAlign="end"
     >
       <Box
-        layout={{ axis: "x", align: "center", justify: "center" }}
-        className="mb3"
+        layout={{
+          axis: "x",
+          align: "center",
+          justify: "center",
+          marginBottom: "m",
+          gap: "s",
+        }}
       >
-        <p className="fw5 mr2">Viewing bio from:</p>
+        <p className="fw5">Viewing bio from: </p>
         <Select
           options={Object.keys(bios).reverse()}
           value={bio}

@@ -26,8 +26,9 @@ const Section = ({
     </h1>
     <p className="tc ma0 pa1">{description}</p>
     <Box
+      layout={{ marginX: "auto", marginTop: "s", marginBottom: "m" }}
       style={{ width: 50, height: 5 }}
-      className="m-auto mt2 mb3 bg-accent"
+      className="bg-accent"
     />
     {children}
   </section>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, useScroll } from "@adamjanicki/ui";
-import Logo from "src/img/logo.svg?react";
+import { Box, UnstyledLink, useScroll, Icon } from "@adamjanicki/ui";
 import "src/css/nav.css";
 
 const SCROLL_THRESHOLD = 20;
@@ -37,11 +36,12 @@ const Nav = () => {
         className="bar-container"
       >
         <UnstyledLink
-          className="nav-title flex items-center"
+          layout={{ axis: "x", align: "center" }}
+          className="nav-title"
           to="#home"
           aria-label="home"
         >
-          <Logo height={32} />
+          <Icon icon="architect" size="l" />
         </UnstyledLink>
         <Box className="mobile">
           <Hamburger

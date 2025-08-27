@@ -24,7 +24,7 @@ const CONTACTS = [
     description: "Check out my GitHub",
   },
   {
-    icon: <Atom height={64} style={{ margin: 8 }} />,
+    icon: <Atom height={64} />,
     to: "https://adamovies.com",
     title: "Blog",
     description: "My main updates",

@@ -1,8 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Section from "src/components/Section";
-import { faGithubAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Secret from "src/components/Secret";
-import { Box, UnstyledLink } from "@adamjanicki/ui";
+import { Box, UnstyledLink, Icon } from "@adamjanicki/ui";
 import Atom from "src/img/atom.svg?react";
 
 type ContactInfo = {
@@ -14,19 +12,19 @@ type ContactInfo = {
 
 const CONTACTS = [
   {
-    icon: <FontAwesomeIcon icon={faLinkedin} size="5x" />,
+    icon: <Icon icon="link" size="xxl" />,
     to: "https://www.linkedin.com/in/adam-janicki-093859197/",
     title: "LinkedIn",
     description: "Connect with me",
   },
   {
-    icon: <FontAwesomeIcon icon={faGithubAlt} size="5x" />,
+    icon: <Icon icon="shell" size="xxl" />,
     to: "https://github.com/adamjanicki2",
     title: "GitHub",
     description: "Check out my GitHub",
   },
   {
-    icon: <Atom height={64} style={{ margin: 8 }} />,
+    icon: <Atom height={64} />,
     to: "https://adamovies.com",
     title: "Blog",
     description: "My main updates",
@@ -35,13 +33,14 @@ const CONTACTS = [
 
 const ContactLink = ({ icon, to, title, description }: ContactInfo) => (
   <UnstyledLink
-    className="flex flex-column ma2 items-center accent-hover"
+    layout={{ axis: "y", align: "center", margin: "s" }}
+    className="accent-hover"
     to={to}
     external
   >
     {icon}
-    <h1 className="f3 fw6 ma0 pa0">{title}</h1>
-    <p className="f6 fw3 ma0 pa0 dark-gray">{description}</p>
+    <h1 className="aui-ma-none f3 fw6">{title}</h1>
+    <p className="aui-ma-none f6 fw5 dark-gray">{description}</p>
   </UnstyledLink>
 );
 

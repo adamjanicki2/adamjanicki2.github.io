@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // Stylesheets
 import "@adamjanicki/ui/style.css";
-import "tachyons/css/tachyons.min.css";
 import "src/css/style.css";
 import "src/css/media.css";
 import App from "src/components/App";

@@ -1,4 +1,4 @@
-import { Box } from "@adamjanicki/ui";
+import { Box, ui } from "@adamjanicki/ui";
 import { ReactNode } from "react";
 import "src/css/section.css";
 
@@ -11,27 +11,31 @@ type Props = {
   secretAlign: "start" | "end";
 };
 
-const Section = ({
+export default function Section({
   title,
   id,
   children,
   description,
   secret,
   secretAlign,
-}: Props) => (
-  <section className="section">
-    <Box layout={{ axis: "x", justify: secretAlign }}>{secret}</Box>
-    <h1 id={id} className="section-title tc ma0 pa0">
-      {title}
-    </h1>
-    <p className="tc ma0 pa1">{description}</p>
-    <Box
-      layout={{ marginX: "auto", marginTop: "s", marginBottom: "m" }}
-      style={{ width: 50, height: 5 }}
-      className="bg-accent"
-    />
-    {children}
-  </section>
-);
-
-export default Section;
+}: Props) {
+  return (
+    <ui.section>
+      <Box vfx={{ axis: "x", justify: secretAlign }}>{secret}</Box>
+      <ui.h1
+        vfx={{ textAlign: "center", margin: "none" }}
+        id={id}
+        style={{ fontSize: "42px" }}
+      >
+        {title}
+      </ui.h1>
+      <ui.p vfx={{ margin: "none", textAlign: "center" }}>{description}</ui.p>
+      <Box
+        vfx={{ marginX: "auto", marginTop: "s", marginBottom: "m" }}
+        style={{ width: 50, height: 5 }}
+        className="bg-accent"
+      />
+      {children}
+    </ui.section>
+  );
+}

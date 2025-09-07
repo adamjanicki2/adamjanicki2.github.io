@@ -1,19 +1,14 @@
 :root {
-  --nav-text: white;
-  --nav-padding: 5rem;
+  --nav-padding: 80px;
   --accent: var(--aui-link-color);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 80px;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
 }
 
@@ -27,6 +22,10 @@ body {
 
 .accent-hover {
   transition: color var(--aui-default-transition);
+}
+
+.white {
+  color: white;
 }
 
 .bordering {

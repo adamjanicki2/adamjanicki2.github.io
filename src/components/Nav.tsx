@@ -1,42 +1,34 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, useScroll, Icon } from "@adamjanicki/ui";
+import { Box, UnstyledLink, useScroll, Icon, ui } from "@adamjanicki/ui";
 import "src/css/nav.css";
 
-const SCROLL_THRESHOLD = 20;
-
-const Nav = () => {
+export default function Nav() {
   const [open, setOpen] = useState(false);
-
   const { scrollY } = useScroll();
-  const scrolled = scrollY >= SCROLL_THRESHOLD;
+  const scrolled = scrollY >= 25;
 
   const closeMenu = () => setOpen(false);
 
   const Navlink = ({ title }: { title: string }) => (
-    <li className="nav-item">
-      <UnstyledLink
-        className={`navlink ${scrolled ? "navlink-hover" : "dim"}`}
-        to={`#${title.toLowerCase()}`}
-        onClick={closeMenu}
-      >
-        <span>{title}</span>
-      </UnstyledLink>
-    </li>
+    <UnstyledLink
+      vfx={{ width: "full", fontWeight: 5 }}
+      className="aui-dim"
+      to={`#${title.toLowerCase()}`}
+      onClick={closeMenu}
+    >
+      {title}
+    </UnstyledLink>
   );
 
   return (
-    <nav
-      className={`flex items-center justify-between nav${
-        scrolled || open ? "-scrolled" : ""
-      }`}
-    >
+    <ui.nav className={`nav${scrolled || open ? "-scrolled" : ""}`}>
       <Box
-        layout={{ axis: "x", align: "center", justify: "between" }}
+        vfx={{ axis: "x", align: "center", justify: "between" }}
         className="bar-container"
       >
         <UnstyledLink
-          layout={{ axis: "x", align: "center" }}
+          vfx={{ axis: "x", align: "center" }}
           className="nav-title"
           to="#home"
           aria-label="home"
@@ -55,8 +47,8 @@ const Nav = () => {
           />
         </Box>
       </Box>
-      <ul
-        className="flex items-center desktop"
+      <Box
+        className="desktop navlink-container"
         // force display to be open on mobile when hamburger is toggled
         style={open ? { display: "flex" } : undefined}
       >
@@ -64,9 +56,7 @@ const Nav = () => {
         <Navlink title="About" />
         <Navlink title="Projects" />
         <Navlink title="Contact" />
-      </ul>
-    </nav>
+      </Box>
+    </ui.nav>
   );
-};
-
-export default Nav;
+}

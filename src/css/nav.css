@@ -1,8 +1,12 @@
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   transition: all 0.4s ease-in-out;
   top: 0;
+  z-index: 100;
 }
 
 /* Unscrolled */

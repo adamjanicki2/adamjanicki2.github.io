@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { useMediaQuery } from "@adamjanicki/ui";
 import { Box, UnstyledLink, useScroll, Icon, ui } from "@adamjanicki/ui";
 import "src/css/nav.css";
 
@@ -10,11 +9,6 @@ export default function Nav() {
   const scrolled = scrollY >= 25;
 
   const closeMenu = () => setOpen(false);
-
-  useMediaQuery({
-    query: "(max-width: 820px)",
-    onUnmatch: () => setOpen(false),
-  });
 
   const Navlink = ({ title }: { title: string }) => (
     <UnstyledLink
@@ -27,26 +21,8 @@ export default function Nav() {
     </UnstyledLink>
   );
 
-  const linkVfx = open
-    ? ({
-        axis: "y",
-        align: "center",
-        width: "full",
-        gap: "m",
-        paddingY: "m",
-      } as const)
-    : ({
-        axis: "x",
-        align: "center",
-        gap: "xl",
-        padding: "m",
-      } as const);
-
   return (
-    <ui.nav
-      vfx={{ axis: open ? "y" : "x", align: "center", justify: "between" }}
-      className={`nav${scrolled || open ? "-scrolled" : ""}`}
-    >
+    <ui.nav className={`nav${scrolled || open ? "-scrolled" : ""}`}>
       <Box
         vfx={{ axis: "x", align: "center", justify: "between" }}
         className="bar-container"
@@ -72,8 +48,7 @@ export default function Nav() {
         </Box>
       </Box>
       <Box
-        vfx={linkVfx}
-        className="desktop"
+        className="desktop navlink-container"
         // force display to be open on mobile when hamburger is toggled
         style={open ? { display: "flex" } : undefined}
       >

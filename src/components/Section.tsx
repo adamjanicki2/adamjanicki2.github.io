@@ -20,12 +20,12 @@ export default function Section({
   secretAlign,
 }: Props) {
   return (
-    <ui.section className="section">
+    <ui.section>
       <Box vfx={{ axis: "x", justify: secretAlign }}>{secret}</Box>
       <ui.h1
         vfx={{ textAlign: "center", margin: "none" }}
         id={id}
-        className="section-title"
+        style={{ fontSize: "42px" }}
       >
         {title}
       </ui.h1>

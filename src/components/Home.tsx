@@ -11,7 +11,7 @@ export default function Home() {
       vfx={{ axis: "y", align: "center", justify: "between" }}
     >
       <Box />
-      <ui.h1 className="home-welcome">Hi, I'm Adam.</ui.h1>
+      <ui.h1 style={{ fontSize: "54px" }}>Hi, I'm Adam.</ui.h1>
       <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
         <Secret
           slug="star-wars-episode-iii-revenge-of-the-sith"

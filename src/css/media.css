@@ -19,14 +19,8 @@ li {
 }
 
 @media (hover: hover) {
-  .dim:hover {
-    opacity: 0.85;
-  }
   .accent-hover:hover {
     color: var(--accent);
-  }
-  .navlink-hover:hover * {
-    border-bottom: 2px solid var(--accent);
   }
   .hidden-text:hover {
     color: inherit;
@@ -79,9 +73,6 @@ li {
     margin: 0;
     width: 100%;
   }
-  .navlink {
-    margin: 0.5rem 0;
-  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -123,8 +114,5 @@ li {
   li {
     margin: 0;
     width: 100%;
-  }
-  .navlink {
-    margin: 0.5rem 0;
   }
 }

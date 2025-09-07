@@ -32,11 +32,11 @@ const Nav = () => {
       }`}
     >
       <Box
-        layout={{ axis: "x", align: "center", justify: "between" }}
+        vfx={{ axis: "x", align: "center", justify: "between" }}
         className="bar-container"
       >
         <UnstyledLink
-          layout={{ axis: "x", align: "center" }}
+          vfx={{ axis: "x", align: "center" }}
           className="nav-title"
           to="#home"
           aria-label="home"

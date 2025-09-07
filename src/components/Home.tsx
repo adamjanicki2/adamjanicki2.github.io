@@ -6,13 +6,11 @@ const Home = () => (
   <Box
     id="home"
     className="marquee white"
-    layout={{ axis: "y", align: "center", justify: "between" }}
+    vfx={{ axis: "y", align: "center", justify: "between" }}
   >
     <Box />
     <h1 className="home-welcome tc">Hi, I'm Adam.</h1>
-    <Box
-      layout={{ axis: "x", justify: "between", padding: "m", width: "full" }}
-    >
+    <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
       <Secret
         slug="star-wars-episode-iii-revenge-of-the-sith"
         text="Hello there!"

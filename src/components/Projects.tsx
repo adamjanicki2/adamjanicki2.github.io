@@ -112,7 +112,7 @@ const PROJECTS: readonly ProjectType[] = [
 const Project = ({ title, img, description, to, date }: ProjectType) => {
   return (
     <UnstyledLink
-      layout={{ axis: "y", padding: "m" }}
+      vfx={{ axis: "y", padding: "m" }}
       className="accent-hover pc-w"
       to={to}
       external={!to.startsWith("#")}
@@ -140,7 +140,7 @@ const Projects = () => (
     }
     secretAlign="start"
   >
-    <Box layout={{ axis: "x", wrap: true, justify: "center" }}>
+    <Box vfx={{ axis: "x", wrap: true, justify: "center" }}>
       {PROJECTS.map((project) => (
         <Project {...project} key={project.title} />
       ))}

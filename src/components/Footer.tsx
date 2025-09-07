@@ -4,7 +4,7 @@ import "src/css/footer.css";
 
 const Footer = () => (
   <Box
-    layout={{
+    vfx={{
       axis: "y",
       align: "center",
       justify: "between",
@@ -12,9 +12,7 @@ const Footer = () => (
     }}
     className="footer"
   >
-    <Box
-      layout={{ axis: "x", justify: "between", padding: "m", width: "full" }}
-    >
+    <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
       <p className="ma0 tr desktop" style={{ fontSize: "10px" }}>
         Did someone say… hidden movie quotes?
       </p>
@@ -26,9 +24,7 @@ const Footer = () => (
     <p className="fw5 f5 pa1 br2" style={{ backdropFilter: "blur(8px)" }}>
       Est. 2023 Built from scratch by Adam
     </p>
-    <Box
-      layout={{ axis: "x", justify: "between", padding: "m", width: "full" }}
-    >
+    <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
       <Secret
         text="This Is Ripley, Last Survivor Of The Nostromo...Signing Off."
         slug="alien"

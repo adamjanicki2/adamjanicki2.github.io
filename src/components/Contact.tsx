@@ -33,7 +33,7 @@ const CONTACTS = [
 
 const ContactLink = ({ icon, to, title, description }: ContactInfo) => (
   <UnstyledLink
-    layout={{ axis: "y", align: "center", margin: "s" }}
+    vfx={{ axis: "y", align: "center", margin: "s" }}
     className="accent-hover"
     to={to}
     external
@@ -57,7 +57,7 @@ const Contact = () => (
     }
     secretAlign="end"
   >
-    <Box layout={{ axis: "x", wrap: true }} className="justify-around">
+    <Box vfx={{ axis: "x", wrap: true }} className="justify-around">
       {CONTACTS.map((contact) => (
         <ContactLink key={contact.title} {...contact} />
       ))}

@@ -133,7 +133,7 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
   return (
     <UnstyledLink
       vfx={{ axis: "y", padding: "m", gap: "xs" }}
-      className="accent-hover pc-w"
+      className="accent-hover w-project"
       to={to}
       external={!to.startsWith("#")}
     >

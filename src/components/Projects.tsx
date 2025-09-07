@@ -149,7 +149,7 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
       >
         {date}
       </ui.p>
-      <ui.p vfx={{ margin: "none" }}>{description}</ui.p>
+      <ui.p vfx={{ margin: "none", color: "default" }}>{description}</ui.p>
     </UnstyledLink>
   );
 };

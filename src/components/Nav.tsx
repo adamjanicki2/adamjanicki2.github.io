@@ -1,35 +1,31 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, useScroll, Icon } from "@adamjanicki/ui";
+import { Box, UnstyledLink, useScroll, Icon, ui } from "@adamjanicki/ui";
 import "src/css/nav.css";
 
-const SCROLL_THRESHOLD = 20;
-
-const Nav = () => {
+export default function Nav() {
   const [open, setOpen] = useState(false);
-
   const { scrollY } = useScroll();
-  const scrolled = scrollY >= SCROLL_THRESHOLD;
+  const scrolled = scrollY >= 25;
 
   const closeMenu = () => setOpen(false);
 
   const Navlink = ({ title }: { title: string }) => (
-    <li className="nav-item">
+    <ui.li className="nav-item">
       <UnstyledLink
         className={`navlink ${scrolled ? "navlink-hover" : "dim"}`}
         to={`#${title.toLowerCase()}`}
         onClick={closeMenu}
       >
-        <span>{title}</span>
+        {title}
       </UnstyledLink>
-    </li>
+    </ui.li>
   );
 
   return (
-    <nav
-      className={`flex items-center justify-between nav${
-        scrolled || open ? "-scrolled" : ""
-      }`}
+    <ui.nav
+      vfx={{ axis: "x", align: "center", justify: "between" }}
+      className={`nav${scrolled || open ? "-scrolled" : ""}`}
     >
       <Box
         vfx={{ axis: "x", align: "center", justify: "between" }}
@@ -55,8 +51,9 @@ const Nav = () => {
           />
         </Box>
       </Box>
-      <ul
-        className="flex items-center desktop"
+      <ui.ul
+        vfx={{ axis: "x", align: "center" }}
+        className="desktop"
         // force display to be open on mobile when hamburger is toggled
         style={open ? { display: "flex" } : undefined}
       >
@@ -64,9 +61,7 @@ const Nav = () => {
         <Navlink title="About" />
         <Navlink title="Projects" />
         <Navlink title="Contact" />
-      </ul>
-    </nav>
+      </ui.ul>
+    </ui.nav>
   );
-};
-
-export default Nav;
+}

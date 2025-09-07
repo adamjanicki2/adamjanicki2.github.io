@@ -3,6 +3,54 @@ import { useState } from "react";
 import Secret from "src/components/Secret";
 import Section from "src/components/Section";
 
+export default function About() {
+  const [bio, setBio] = useState<Bio>("Summer 2025");
+
+  return (
+    <Section
+      id="about"
+      title="About me"
+      description="Welcome to Adam 101."
+      secret={
+        <Secret text="...because my dad promised me." slug="interstellar" />
+      }
+      secretAlign="end"
+    >
+      <Box
+        vfx={{
+          axis: "x",
+          align: "center",
+          justify: "center",
+          marginBottom: "m",
+          gap: "s",
+        }}
+      >
+        <ui.p vfx={{ fontWeight: 5 }}>Viewing bio from: </ui.p>
+        <Select
+          options={Object.keys(bios)}
+          value={bio}
+          onChange={(e) => setBio(e.target.value as Bio)}
+          aria-label="bio select"
+        />
+      </Box>
+      <Box className="h-about">
+        <ui.img
+          src="/images/me.webp"
+          alt=""
+          vfx={{ radius: "rounded", marginRight: "m", marginBottom: "m" }}
+          className="about-img"
+        />
+        <ui.p
+          vfx={{ margin: "none", fontSize: "m" }}
+          style={{ lineHeight: 1.5 }}
+        >
+          {bios[bio]}
+        </ui.p>
+      </Box>
+    </Section>
+  );
+}
+
 const bios = {
   "Summer 2025": (
     <>
@@ -204,51 +252,3 @@ const bios = {
 } as const;
 
 type Bio = keyof typeof bios;
-
-export default function About() {
-  const [bio, setBio] = useState<Bio>("Summer 2025");
-
-  return (
-    <Section
-      id="about"
-      title="About me"
-      description="Welcome to Adam 101."
-      secret={
-        <Secret text="...because my dad promised me." slug="interstellar" />
-      }
-      secretAlign="end"
-    >
-      <Box
-        vfx={{
-          axis: "x",
-          align: "center",
-          justify: "center",
-          marginBottom: "m",
-          gap: "s",
-        }}
-      >
-        <ui.p vfx={{ fontWeight: 5 }}>Viewing bio from: </ui.p>
-        <Select
-          options={Object.keys(bios)}
-          value={bio}
-          onChange={(e) => setBio(e.target.value as Bio)}
-          aria-label="bio select"
-        />
-      </Box>
-      <Box className="h-about">
-        <ui.img
-          src="/images/me.webp"
-          alt=""
-          vfx={{ radius: "rounded", marginRight: "m", marginBottom: "m" }}
-          className="about-img"
-        />
-        <ui.p
-          vfx={{ margin: "none", fontSize: "m" }}
-          style={{ lineHeight: 1.5 }}
-        >
-          {bios[bio]}
-        </ui.p>
-      </Box>
-    </Section>
-  );
-}

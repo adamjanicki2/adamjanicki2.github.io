@@ -1,6 +1,26 @@
-import { Box, UnstyledLink } from "@adamjanicki/ui";
+import { Box, UnstyledLink, ui } from "@adamjanicki/ui";
 import Secret from "src/components/Secret";
 import Section from "src/components/Section";
+
+export default function Projects() {
+  return (
+    <Section
+      id="projects"
+      title="Projects"
+      description="Here's what I've been up to."
+      secret={
+        <Secret text="Aw man, I shot Marvin in the face!" slug="pulp-fiction" />
+      }
+      secretAlign="start"
+    >
+      <Box vfx={{ axis: "x", wrap: true, justify: "center" }}>
+        {PROJECTS.map((project) => (
+          <Project {...project} key={project.title} />
+        ))}
+      </Box>
+    </Section>
+  );
+}
 
 type ProjectType = {
   title: string;
@@ -112,40 +132,24 @@ const PROJECTS: readonly ProjectType[] = [
 const Project = ({ title, img, description, to, date }: ProjectType) => {
   return (
     <UnstyledLink
-      vfx={{ axis: "y", padding: "m" }}
+      vfx={{ axis: "y", padding: "m", gap: "xs" }}
       className="accent-hover pc-w"
       to={to}
       external={!to.startsWith("#")}
     >
-      <img
+      <ui.img
         src={`/images/projects/${img}.webp`}
         alt=""
         style={{ maxHeight: 420 }}
-        className="ba br2 b--moon-gray"
+        vfx={{ radius: "rounded", border: true }}
       />
-      <h2 className="ma0 mv1 f3 fw6">{title}</h2>
-      <p className="ma0 mb1 dark-gray f6 fw5">{date}</p>
-      <p className="ma0 black fw4">{description}</p>
+      <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
+      <ui.p
+        vfx={{ margin: "none", fontSize: "s", fontWeight: 5, color: "muted" }}
+      >
+        {date}
+      </ui.p>
+      <ui.p vfx={{ margin: "none" }}>{description}</ui.p>
     </UnstyledLink>
   );
 };
-
-const Projects = () => (
-  <Section
-    id="projects"
-    title="Projects"
-    description="Here's what I've been up to."
-    secret={
-      <Secret text="Aw man, I shot Marvin in the face!" slug="pulp-fiction" />
-    }
-    secretAlign="start"
-  >
-    <Box vfx={{ axis: "x", wrap: true, justify: "center" }}>
-      {PROJECTS.map((project) => (
-        <Project {...project} key={project.title} />
-      ))}
-    </Box>
-  </Section>
-);
-
-export default Projects;

@@ -13,7 +13,7 @@ ul {
 
 .nav {
   background-color: inherit;
-  color: var(--nav-text);
+  color: white;
   padding: 1.25rem var(--nav-padding);
 }
 

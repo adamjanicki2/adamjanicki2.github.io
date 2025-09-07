@@ -6,7 +6,7 @@ import Contact from "src/components/Contact";
 import Footer from "src/components/Footer";
 import { useScrollToHash } from "@adamjanicki/ui";
 
-const App = () => {
+export default function App() {
   useScrollToHash();
   return (
     <>
@@ -18,6 +18,4 @@ const App = () => {
       <Footer />
     </>
   );
-};
-
-export default App;
+}

@@ -1,5 +1,4 @@
 :root {
-  --nav-text: white;
   --nav-padding: 5rem;
   --accent: var(--aui-link-color);
 }
@@ -23,6 +22,10 @@ body {
 
 .accent-hover {
   transition: color var(--aui-default-transition);
+}
+
+.white {
+  color: white;
 }
 
 .bordering {

@@ -1,7 +1,30 @@
 import Section from "src/components/Section";
 import Secret from "src/components/Secret";
-import { Box, UnstyledLink, Icon } from "@adamjanicki/ui";
+import { Box, UnstyledLink, Icon, ui } from "@adamjanicki/ui";
 import Atom from "src/img/atom.svg?react";
+
+export default function Contact() {
+  return (
+    <Section
+      title="Contact"
+      id="contact"
+      description="Connect with me."
+      secret={
+        <Secret
+          text="Snakes... why'd it have to be snakes?"
+          slug="raiders-of-the-lost-ark"
+        />
+      }
+      secretAlign="end"
+    >
+      <Box vfx={{ axis: "x", wrap: true, justify: "around" }}>
+        {CONTACTS.map((contact) => (
+          <ContactLink key={contact.title} {...contact} />
+        ))}
+      </Box>
+    </Section>
+  );
+}
 
 type ContactInfo = {
   icon: React.ReactNode;
@@ -39,30 +62,11 @@ const ContactLink = ({ icon, to, title, description }: ContactInfo) => (
     external
   >
     {icon}
-    <h1 className="aui-ma-none f3 fw6">{title}</h1>
-    <p className="aui-ma-none f6 fw5 dark-gray">{description}</p>
+    <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
+    <ui.p
+      vfx={{ margin: "none", fontSize: "s", fontWeight: 5, color: "muted" }}
+    >
+      {description}
+    </ui.p>
   </UnstyledLink>
 );
-
-const Contact = () => (
-  <Section
-    title="Contact"
-    id="contact"
-    description="Connect with me."
-    secret={
-      <Secret
-        text="Snakes... why'd it have to be snakes?"
-        slug="raiders-of-the-lost-ark"
-      />
-    }
-    secretAlign="end"
-  >
-    <Box vfx={{ axis: "x", wrap: true }} className="justify-around">
-      {CONTACTS.map((contact) => (
-        <ContactLink key={contact.title} {...contact} />
-      ))}
-    </Box>
-  </Section>
-);
-
-export default Contact;

@@ -1,6 +1,7 @@
 import Section from "src/components/Section";
 import Secret from "src/components/Secret";
 import { Box, UnstyledLink, Icon, ui } from "@adamjanicki/ui";
+import { link, shell } from "@adamjanicki/ui/icons";
 import Atom from "src/img/atom.svg?react";
 
 export default function Contact() {
@@ -35,13 +36,13 @@ type ContactInfo = {
 
 const CONTACTS = [
   {
-    icon: <Icon icon="link" size="xxl" />,
+    icon: <Icon icon={link} size="xxl" />,
     to: "https://www.linkedin.com/in/adam-janicki-093859197/",
     title: "LinkedIn",
     description: "Connect with me",
   },
   {
-    icon: <Icon icon="shell" size="xxl" />,
+    icon: <Icon icon={shell} size="xxl" />,
     to: "https://github.com/adamjanicki2",
     title: "GitHub",
     description: "Check out my GitHub",
@@ -59,7 +60,7 @@ const ContactLink = ({ icon, to, title, description }: ContactInfo) => (
     vfx={{ axis: "y", align: "center", margin: "s" }}
     className="accent-hover"
     to={to}
-    external
+    newTab
   >
     {icon}
     <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>

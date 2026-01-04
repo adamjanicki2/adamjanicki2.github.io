@@ -135,7 +135,7 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
       vfx={{ axis: "y", padding: "m", gap: "xs" }}
       className="accent-hover w-project"
       to={to}
-      external={!to.startsWith("#")}
+      newTab={!to.startsWith("#")}
     >
       <ui.img
         src={`/images/projects/${img}.webp`}

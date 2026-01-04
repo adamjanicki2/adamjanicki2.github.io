@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, useScroll, Icon, ui } from "@adamjanicki/ui";
+import { Box, UnstyledLink, Link, useScroll, Icon, ui } from "@adamjanicki/ui";
+import { architect } from "@adamjanicki/ui/icons";
 import "src/css/nav.css";
 
 export default function Nav() {
@@ -11,14 +12,13 @@ export default function Nav() {
   const closeMenu = () => setOpen(false);
 
   const Navlink = ({ title }: { title: string }) => (
-    <UnstyledLink
-      vfx={{ width: "full", fontWeight: 5 }}
-      className="aui-dim"
+    <Link
+      vfx={{ width: "full", color: "inherit" }}
       to={`#${title.toLowerCase()}`}
       onClick={closeMenu}
     >
       {title}
-    </UnstyledLink>
+    </Link>
   );
 
   return (
@@ -29,11 +29,10 @@ export default function Nav() {
       >
         <UnstyledLink
           vfx={{ axis: "x", align: "center" }}
-          className="nav-title"
           to="#home"
           aria-label="home"
         >
-          <Icon icon="architect" size="l" />
+          <Icon icon={architect} size="l" />
         </UnstyledLink>
         <Box className="mobile">
           <Hamburger

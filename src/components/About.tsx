@@ -33,7 +33,7 @@ export default function About() {
           aria-label="bio select"
         />
       </Box>
-      <Box className="h-about">
+      <Box className="about-container">
         <ui.img
           src="/images/me.webp"
           alt=""

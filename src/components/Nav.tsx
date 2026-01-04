@@ -9,18 +9,6 @@ export default function Nav() {
   const { scrollY } = useScroll();
   const scrolled = scrollY >= 25;
 
-  const closeMenu = () => setOpen(false);
-
-  const Navlink = ({ title }: { title: string }) => (
-    <Link
-      vfx={{ width: "full", color: "inherit" }}
-      to={`#${title.toLowerCase()}`}
-      onClick={closeMenu}
-    >
-      {title}
-    </Link>
-  );
-
   return (
     <ui.nav className={`nav${scrolled || open ? "-scrolled" : ""}`}>
       <Box
@@ -48,13 +36,18 @@ export default function Nav() {
       </Box>
       <Box
         className="desktop navlink-container"
-        // force display to be open on mobile when hamburger is toggled
         style={open ? { display: "flex" } : undefined}
       >
-        <Navlink title="Home" />
-        <Navlink title="About" />
-        <Navlink title="Projects" />
-        <Navlink title="Contact" />
+        {["Home", "About", "Projects", "Contact"].map((title) => (
+          <Link
+            key={title}
+            vfx={{ width: "full", color: "inherit" }}
+            to={`#${title.toLowerCase()}`}
+            onClick={() => setOpen(false)}
+          >
+            {title}
+          </Link>
+        ))}
       </Box>
     </ui.nav>
   );

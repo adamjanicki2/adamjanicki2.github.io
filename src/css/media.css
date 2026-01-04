@@ -40,9 +40,6 @@
   .w-project {
     width: 90%;
   }
-  .about {
-    flex-direction: column;
-  }
   .h-about {
     min-height: 380px;
     display: flex;

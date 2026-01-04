@@ -12,12 +12,12 @@ body {
   overscroll-behavior: none;
 }
 
-.bg-accent {
-  background-color: var(--accent);
+section {
+  padding: var(--nav-padding) var(--nav-padding) 0 var(--nav-padding);
 }
 
-.accent {
-  color: var(--accent);
+.bg-accent {
+  background-color: var(--accent);
 }
 
 .accent-hover {

@@ -33,7 +33,7 @@ export default function About() {
           aria-label="bio select"
         />
       </Box>
-      <Box className="h-about">
+      <Box className="about-container">
         <ui.img
           src="/images/me.webp"
           alt=""
@@ -79,7 +79,7 @@ const bios = {
       ventured into writing some articles about{" "}
       <Link
         to="https://www.adamovies.com/article/100-years-of-soundtracks"
-        external
+        newTab
       >
         film scores & music
       </Link>{" "}
@@ -90,7 +90,7 @@ const bios = {
     <>
       Hey there! My name is Adam Janicki; I'm a recent-grad turned Software
       Engineer. Currently, I'm enjoying working at{" "}
-      <Link to="https://stripe.com" external>
+      <Link to="https://stripe.com" newTab>
         Stripe
       </Link>
       . Since I'm no longer focusing on showcasing myself to potential
@@ -110,7 +110,7 @@ const bios = {
       <ui.br />
       <ui.br />
       My pride and joy is a movie review website I run and write for called{" "}
-      <Link to="https://adamovies.com" external>
+      <Link to="https://adamovies.com" newTab>
         Adamovies
       </Link>
       . Recently, I've been loving exploring older movies with my friends,
@@ -130,7 +130,7 @@ const bios = {
       famous{" "}
       <Link
         to="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/"
-        external
+        newTab
       >
         6.172/6.106
       </Link>
@@ -141,7 +141,7 @@ const bios = {
       Outside of work related things, I'm an ex-swimmer, and I love to bike,
       play sports, or do anything active. I also run a movie review website
       called{" "}
-      <Link to="https://adamovies.com" external>
+      <Link to="https://adamovies.com" newTab>
         Adamovies
       </Link>
       . My favorite movie of all time is Interstellar, but I have a soft spot
@@ -161,11 +161,11 @@ const bios = {
       <ui.br /> <ui.br />
       Outside of work related things, I love to swim or do anything active. I
       also run a movie review website called{" "}
-      <Link to="https://www.adamovies.com/" external>
+      <Link to="https://www.adamovies.com/" newTab>
         Adamovies
       </Link>
       . My favorite movie of all time is{" "}
-      <Link to="https://www.adamovies.com/review/interstellar" external>
+      <Link to="https://www.adamovies.com/review/interstellar" newTab>
         Interstellar
       </Link>
       , but I have a soft spot for sci-fi in general.
@@ -180,14 +180,14 @@ const bios = {
       <ui.br />
       <ui.br />
       Starting in May 2022, I'll be working for{" "}
-      <Link to="https://stripe.com/" external>
+      <Link to="https://stripe.com/" newTab>
         Stripe
       </Link>{" "}
       as a Software Engineering Intern 📈
       <ui.br />
       <ui.br />
       Recently, I've been working as a lab assistant for{" "}
-      <Link to="http://student.mit.edu/catalog/m6a.html#6.031" external>
+      <Link to="http://student.mit.edu/catalog/m6a.html#6.031" newTab>
         6.031
       </Link>{" "}
       (Software Construction) at MIT 🔨
@@ -196,12 +196,12 @@ const bios = {
       Outside of Academics, I'm a member of the{" "}
       <Link
         to="https://mitathletics.com/sports/mens-swimming-and-diving/roster/2020-21"
-        external
+        newTab
       >
         MIT Swim Team
       </Link>{" "}
       , and an{" "}
-      <Link to="https://www.adamovies.com/" external>
+      <Link to="https://www.adamovies.com/" newTab>
         avid reviewer
       </Link>{" "}
       of movies and TV Shows 🎬
@@ -209,7 +209,7 @@ const bios = {
       <ui.br />
       Thanks for stopping by; I'd love to connect! Feel free to reach out to me
       by{" "}
-      <Link to="mailto:ajanicki@mit.edu" external>
+      <Link to="mailto:ajanicki@mit.edu" newTab>
         email
       </Link>{" "}
       📬
@@ -222,7 +222,7 @@ const bios = {
       <ui.br />
       <ui.br />
       Recently, I've been working as a Software Developer Intern for{" "}
-      <Link to="https://capitaltg.com" external>
+      <Link to="https://capitaltg.com" newTab>
         Capital Technology Group
       </Link>
       , as well as a Lab Assistant for 6.0001/2 (Intro to CS) under the MIT
@@ -231,11 +231,11 @@ const bios = {
       <ui.br />
       Outside of Academics, I'm a member of the MIT Varsity Swimming and Diving
       Team, and also a mentor for{" "}
-      <Link to="https://amphibious.mit.edu/" external>
+      <Link to="https://amphibious.mit.edu/" newTab>
         Amphibious Achievement
       </Link>
       . I'm a total geek for movies and TV, and enjoy{" "}
-      <Link to="https://adamovies.com" external>
+      <Link to="https://adamovies.com" newTab>
         sharing
       </Link>{" "}
       about what I watch.
@@ -243,7 +243,7 @@ const bios = {
       <ui.br />
       Thanks for stopping by; I'd love to connect! Feel free to reach out to me
       by{" "}
-      <Link to="mailto:ajanicki@mit.edu" external>
+      <Link to="mailto:ajanicki@mit.edu" newTab>
         email
       </Link>
       !

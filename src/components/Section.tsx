@@ -1,13 +1,12 @@
+import type * as React from "react";
 import { Box, ui } from "@adamjanicki/ui";
-import { ReactNode } from "react";
-import "src/css/section.css";
 
 type Props = {
   id: string;
   title: string;
   description: string;
-  children: ReactNode;
-  secret: JSX.Element;
+  children: React.ReactNode;
+  secret: React.ReactNode;
   secretAlign: "start" | "end";
 };
 
@@ -25,7 +24,7 @@ export default function Section({
       <ui.h1
         vfx={{ textAlign: "center", margin: "none" }}
         id={id}
-        style={{ fontSize: "42px" }}
+        style={{ fontSize: 42 }}
       >
         {title}
       </ui.h1>

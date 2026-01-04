@@ -11,8 +11,8 @@ export default function Secret({ slug, text }: Props) {
     <UnstyledLink
       to={`https://adamovies.com/review/${slug}`}
       vfx={{ fontSize: "xs", fontWeight: 6, italics: true }}
-      className="hidden-text Hey, inspecting element is cheating!"
-      external
+      className="hidden-text"
+      newTab
     >
       “{text}”
     </UnstyledLink>

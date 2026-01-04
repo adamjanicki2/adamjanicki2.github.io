@@ -133,9 +133,9 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
   return (
     <UnstyledLink
       vfx={{ axis: "y", padding: "m", gap: "xs" }}
-      className="accent-hover w-project"
+      className="accent-hover proj-container"
       to={to}
-      external={!to.startsWith("#")}
+      newTab={!to.startsWith("#")}
     >
       <ui.img
         src={`/images/projects/${img}.webp`}

@@ -1,25 +1,13 @@
 import { useState } from "react";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, useScroll, Icon, ui } from "@adamjanicki/ui";
+import { Box, UnstyledLink, Link, useScroll, Icon, ui } from "@adamjanicki/ui";
+import { architect } from "@adamjanicki/ui/icons";
 import "src/css/nav.css";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
   const scrolled = scrollY >= 25;
-
-  const closeMenu = () => setOpen(false);
-
-  const Navlink = ({ title }: { title: string }) => (
-    <UnstyledLink
-      vfx={{ width: "full", fontWeight: 5 }}
-      className="aui-dim"
-      to={`#${title.toLowerCase()}`}
-      onClick={closeMenu}
-    >
-      {title}
-    </UnstyledLink>
-  );
 
   return (
     <ui.nav className={`nav${scrolled || open ? "-scrolled" : ""}`}>
@@ -29,11 +17,10 @@ export default function Nav() {
       >
         <UnstyledLink
           vfx={{ axis: "x", align: "center" }}
-          className="nav-title"
           to="#home"
           aria-label="home"
         >
-          <Icon icon="architect" size="l" />
+          <Icon icon={architect} size="l" />
         </UnstyledLink>
         <Box className="mobile">
           <Hamburger
@@ -49,13 +36,18 @@ export default function Nav() {
       </Box>
       <Box
         className="desktop navlink-container"
-        // force display to be open on mobile when hamburger is toggled
         style={open ? { display: "flex" } : undefined}
       >
-        <Navlink title="Home" />
-        <Navlink title="About" />
-        <Navlink title="Projects" />
-        <Navlink title="Contact" />
+        {["Home", "About", "Projects", "Contact"].map((title) => (
+          <Link
+            key={title}
+            vfx={{ width: "full", color: "inherit" }}
+            to={`#${title.toLowerCase()}`}
+            onClick={() => setOpen(false)}
+          >
+            {title}
+          </Link>
+        ))}
       </Box>
     </ui.nav>
   );

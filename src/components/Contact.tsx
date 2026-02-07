@@ -64,7 +64,14 @@ function ContactLink({ icon, to, title, description }: ContactInfo) {
     >
       <Icon icon={icon} size="xxl" />
       <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
-      <ui.span vfx={{ fontSize: "s", fontWeight: 6, color: "muted" }}>
+      <ui.span
+        vfx={{
+          fontSize: "s",
+          fontWeight: 6,
+          color: "muted",
+          textAlign: "center",
+        }}
+      >
         {description}
       </ui.span>
     </UnstyledLink>

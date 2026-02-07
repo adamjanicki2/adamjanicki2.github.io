@@ -12,24 +12,24 @@ export default function Footer() {
         align: "center",
         justify: "between",
         marginTop: "xxl",
+        padding: "s",
       }}
+      style={{ color: "white" }}
     >
-      <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
-        <ui.p vfx={{ margin: "none", fontSize: "xxs" }} className="blur">
-          Did someone say… hidden movie quotes?
-        </ui.p>
+      <Box vfx={{ axis: "x", justify: "between", width: "full", wrap: true }}>
+        <Secret
+          slug="tenet"
+          text="For me, I think this is the end of a beautiful friendship"
+        />
         <Secret
           slug="the-silence-of-the-lambs"
           text="I'm having an old friend for dinner."
         />
       </Box>
-      <ui.p
-        vfx={{ fontWeight: 5, radius: "rounded", padding: "xs" }}
-        className="blur"
-      >
+      <ui.p vfx={{ fontWeight: 6, color: "default" }} className="blur">
         Est. 2022 Built from scratch by Adam
       </ui.p>
-      <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
+      <Box vfx={{ axis: "x", justify: "between", width: "full", wrap: true }}>
         <Secret
           text="This is Ripley, last survivor of The Nostromo...signing off."
           slug="alien"

@@ -16,23 +16,24 @@ export default function About() {
       }
       secretAlign="end"
     >
-      <Box
+      <ui.label
         vfx={{
           axis: "x",
           align: "center",
           justify: "center",
           marginBottom: "m",
           gap: "s",
+          wrap: true,
         }}
       >
-        <ui.p vfx={{ fontWeight: 5 }}>Viewing bio from: </ui.p>
+        <ui.span vfx={{ fontWeight: 5 }}>Viewing bio from</ui.span>
         <Select
           options={Object.keys(bios) as Bio[]}
           value={bio}
           onSelect={setBio}
           aria-label="bio select"
         />
-      </Box>
+      </ui.label>
       <Box className="about-container">
         <ui.img
           src="/images/me.webp"

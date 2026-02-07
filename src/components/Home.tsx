@@ -12,10 +12,10 @@ export default function Home() {
       vfx={{ axis: "y", align: "center", justify: "between" }}
     >
       <Box />
-      <ui.h1 vfx={{ fontWeight: 8 }} style={{ color: "white", fontSize: 54 }}>
+      <ui.h1 vfx={{ fontWeight: 8 }} style={{ fontSize: 54 }}>
         Adam Janicki
       </ui.h1>
-      <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
+      <Box vfx={{ axis: "x", justify: "between", padding: "s", width: "full" }}>
         <Secret
           slug="star-wars-episode-iii-revenge-of-the-sith"
           text="Hello there!"

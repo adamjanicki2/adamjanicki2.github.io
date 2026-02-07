@@ -11,7 +11,7 @@ export default function Projects() {
       secret={<Secret text="I have friends everywhere" slug="andor-s2" />}
       secretAlign="start"
     >
-      <Box vfx={{ axis: "x", wrap: true, justify: "center" }}>
+      <Box vfx={{ axis: "x", wrap: true, justify: "center", gap: "l" }}>
         {PROJECTS.map((project) => (
           <Project {...project} key={project.title} />
         ))}
@@ -130,7 +130,7 @@ const PROJECTS: readonly ProjectType[] = [
 function Project({ title, img, description, to, date }: ProjectType) {
   return (
     <UnstyledLink
-      vfx={{ axis: "y", padding: "m", gap: "xs", hover: "dim" }}
+      vfx={{ axis: "y", gap: "xs", hover: "dim" }}
       className="proj-container"
       to={to}
       newTab={!to.startsWith("#")}

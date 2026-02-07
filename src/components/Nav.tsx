@@ -8,10 +8,9 @@ import { useState } from "react";
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
-  const scrolled = scrollY >= 25;
 
   return (
-    <ui.nav className={scrolled || open ? "nav-scrolled" : undefined}>
+    <ui.nav className={scrollY >= 120 || open ? "nav-scrolled" : undefined}>
       <Box
         vfx={{ axis: "x", align: "center", justify: "between" }}
         className="bar-container"
@@ -28,8 +27,7 @@ export default function Nav() {
             open={open}
             onClick={() => setOpen(!open)}
             direction="right"
-            size={44}
-            vfx={{ margin: "xs" }}
+            size={45}
             aria-label="toggle menu"
             barHeight={3}
           />
@@ -42,9 +40,10 @@ export default function Nav() {
         {["Home", "About", "Projects", "Contact"].map((title) => (
           <Link
             key={title}
-            vfx={{ width: "full", color: "inherit" }}
+            vfx={{ width: "full", color: "inherit", radius: "subtle" }}
             to={`#${title.toLowerCase()}`}
             onClick={() => setOpen(false)}
+            className="blur"
           >
             {title}
           </Link>

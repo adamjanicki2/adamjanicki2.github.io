@@ -1,4 +1,4 @@
-import { useScrollToHash } from "@adamjanicki/ui";
+import { ui, useScrollToHash } from "@adamjanicki/ui";
 import About from "src/components/About";
 import Contact from "src/components/Contact";
 import Footer from "src/components/Footer";
@@ -12,10 +12,12 @@ export default function App() {
   return (
     <>
       <Nav />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <ui.main>
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </ui.main>
       <Footer />
     </>
   );

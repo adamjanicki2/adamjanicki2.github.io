@@ -1,4 +1,4 @@
-import { Box, UnstyledLink, ui } from "@adamjanicki/ui";
+import { Box, ui, UnstyledLink } from "@adamjanicki/ui";
 import Secret from "src/components/Secret";
 import Section from "src/components/Section";
 

@@ -1,7 +1,8 @@
+import "src/css/home.css";
+
 import { Box, ui } from "@adamjanicki/ui";
 import Caption from "src/components/Caption";
 import Secret from "src/components/Secret";
-import "src/css/home.css";
 
 export default function Home() {
   return (

@@ -1,8 +1,9 @@
+import "src/css/nav.css";
+
 import { Box, Icon, Link, ui, UnstyledLink, useScroll } from "@adamjanicki/ui";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
 import { architect } from "@adamjanicki/ui/icons";
 import { useState } from "react";
-import "src/css/nav.css";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);

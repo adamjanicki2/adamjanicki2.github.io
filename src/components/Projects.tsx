@@ -141,7 +141,7 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
         style={{ maxHeight: 420 }}
         vfx={{ radius: "rounded", border: true, shadow: "subtle" }}
       />
-      <ui.h2 vfx={{ margin: "none", fontWeight: 8 }}>{title}</ui.h2>
+      <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
       <ui.span vfx={{ fontSize: "s", fontWeight: 6, color: "muted" }}>
         {date}
       </ui.span>

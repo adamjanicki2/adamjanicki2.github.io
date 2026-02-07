@@ -37,7 +37,13 @@ export default function About() {
         <ui.img
           src="/images/me.webp"
           alt=""
-          vfx={{ radius: "rounded", marginRight: "m", marginBottom: "m" }}
+          vfx={{
+            radius: "rounded",
+            border: true,
+            shadow: "subtle",
+            marginRight: "m",
+            marginBottom: "m",
+          }}
           className="about-img"
         />
         <ui.p vfx={{ margin: "none", fontSize: "m", lineHeight: "m" }}>

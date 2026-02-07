@@ -40,10 +40,7 @@ export default function About() {
           vfx={{ radius: "rounded", marginRight: "m", marginBottom: "m" }}
           className="about-img"
         />
-        <ui.p
-          vfx={{ margin: "none", fontSize: "m" }}
-          style={{ lineHeight: 1.5 }}
-        >
+        <ui.p vfx={{ margin: "none", fontSize: "m", lineHeight: "m" }}>
           {bios[bio]}
         </ui.p>
       </Box>

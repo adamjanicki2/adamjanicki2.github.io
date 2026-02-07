@@ -8,20 +8,12 @@ html {
   scroll-padding-top: 80px;
 }
 
-body {
-  overscroll-behavior: none;
-}
-
 section {
   padding: var(--nav-padding) var(--nav-padding) 0 var(--nav-padding);
 }
 
 .bg-accent {
   background-color: var(--accent);
-}
-
-.accent-hover {
-  transition: color var(--aui-default-transition);
 }
 
 .blur {

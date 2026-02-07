@@ -25,9 +25,6 @@
 }
 
 @media (hover: hover) {
-  .accent-hover:hover {
-    color: var(--accent);
-  }
   .hidden-text:hover {
     color: inherit;
   }

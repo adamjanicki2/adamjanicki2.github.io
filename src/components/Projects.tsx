@@ -130,8 +130,8 @@ const PROJECTS: readonly ProjectType[] = [
 const Project = ({ title, img, description, to, date }: ProjectType) => {
   return (
     <UnstyledLink
-      vfx={{ axis: "y", padding: "m", gap: "xs" }}
-      className="accent-hover proj-container"
+      vfx={{ axis: "y", padding: "m", gap: "xs", hover: "dim" }}
+      className="proj-container"
       to={to}
       newTab={!to.startsWith("#")}
     >
@@ -139,15 +139,13 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
         src={`/images/projects/${img}.webp`}
         alt=""
         style={{ maxHeight: 420 }}
-        vfx={{ radius: "rounded", border: true }}
+        vfx={{ radius: "rounded", border: true, shadow: "subtle" }}
       />
-      <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
-      <ui.p
-        vfx={{ margin: "none", fontSize: "s", fontWeight: 5, color: "muted" }}
-      >
+      <ui.h2 vfx={{ margin: "none", fontWeight: 8 }}>{title}</ui.h2>
+      <ui.span vfx={{ fontSize: "s", fontWeight: 6, color: "muted" }}>
         {date}
-      </ui.p>
-      <ui.p vfx={{ margin: "none", color: "default" }}>{description}</ui.p>
+      </ui.span>
+      <ui.p vfx={{ margin: "none" }}>{description}</ui.p>
     </UnstyledLink>
   );
 };

@@ -1,7 +1,7 @@
-import Section from "src/components/Section";
-import Secret from "src/components/Secret";
-import { Box, UnstyledLink, Icon, ui } from "@adamjanicki/ui";
+import { Box, Icon, ui, UnstyledLink } from "@adamjanicki/ui";
 import { link, shell } from "@adamjanicki/ui/icons";
+import Secret from "src/components/Secret";
+import Section from "src/components/Section";
 import Atom from "src/img/atom.svg?react";
 
 export default function Contact() {

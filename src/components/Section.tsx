@@ -1,5 +1,5 @@
-import type * as React from "react";
 import { Box, ui } from "@adamjanicki/ui";
+import type * as React from "react";
 
 type Props = {
   id: string;

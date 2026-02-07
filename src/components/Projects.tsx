@@ -127,7 +127,7 @@ const PROJECTS: readonly ProjectType[] = [
   },
 ];
 
-const Project = ({ title, img, description, to, date }: ProjectType) => {
+function Project({ title, img, description, to, date }: ProjectType) {
   return (
     <UnstyledLink
       vfx={{ axis: "y", padding: "m", gap: "xs", hover: "dim" }}
@@ -148,4 +148,4 @@ const Project = ({ title, img, description, to, date }: ProjectType) => {
       <ui.p vfx={{ margin: "none" }}>{description}</ui.p>
     </UnstyledLink>
   );
-};
+}

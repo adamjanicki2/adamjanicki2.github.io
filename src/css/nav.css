@@ -4,19 +4,14 @@ nav {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.25s ease-in-out;
   top: 0;
-  z-index: 100;
-}
-
-/* Unscrolled */
-.nav {
-  color: black;
+  z-index: 10;
   padding: 20px var(--nav-padding);
 }
 
 .nav-scrolled {
-  background-color: #fff;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+  background-color: white;
+  box-shadow: 0px 6px 22px 1px rgba(0, 0, 0, 0.1);
   padding: 12px var(--nav-padding);
 }

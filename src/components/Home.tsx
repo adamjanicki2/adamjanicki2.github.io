@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Box
       id="home"
-      className="marquee"
+      className="home"
       vfx={{ axis: "y", align: "center", justify: "between" }}
     >
       <Box />

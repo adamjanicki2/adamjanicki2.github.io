@@ -8,6 +8,7 @@ import Projects from "src/components/Projects";
 
 export default function App() {
   useScrollToHash();
+
   return (
     <>
       <Nav />

@@ -55,16 +55,18 @@ const CONTACTS: readonly ContactInfo[] = [
   },
 ];
 
-const ContactLink = ({ icon, to, title, description }: ContactInfo) => (
-  <UnstyledLink
-    vfx={{ axis: "y", align: "center", margin: "s", gap: "xs", hover: "dim" }}
-    to={to}
-    newTab
-  >
-    <Icon icon={icon} size="xxl" />
-    <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
-    <ui.span vfx={{ fontSize: "s", fontWeight: 6, color: "muted" }}>
-      {description}
-    </ui.span>
-  </UnstyledLink>
-);
+function ContactLink({ icon, to, title, description }: ContactInfo) {
+  return (
+    <UnstyledLink
+      vfx={{ axis: "y", align: "center", margin: "s", gap: "xs", hover: "dim" }}
+      to={to}
+      newTab
+    >
+      <Icon icon={icon} size="xxl" />
+      <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
+      <ui.span vfx={{ fontSize: "s", fontWeight: 6, color: "muted" }}>
+        {description}
+      </ui.span>
+    </UnstyledLink>
+  );
+}

@@ -11,7 +11,7 @@ export default function Nav() {
   const scrolled = scrollY >= 25;
 
   return (
-    <ui.nav className={`nav${scrolled || open ? "-scrolled" : ""}`}>
+    <ui.nav className={scrolled || open ? "nav-scrolled" : undefined}>
       <Box
         vfx={{ axis: "x", align: "center", justify: "between" }}
         className="bar-container"

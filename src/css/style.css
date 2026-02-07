@@ -24,10 +24,6 @@ section {
   transition: color var(--aui-default-transition);
 }
 
-.white {
-  color: white;
-}
-
 .blur {
   backdrop-filter: blur(4px);
 }

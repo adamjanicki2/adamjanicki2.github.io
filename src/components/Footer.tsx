@@ -26,11 +26,11 @@ export default function Footer() {
         vfx={{ fontWeight: 5, radius: "rounded", padding: "xs" }}
         className="blur"
       >
-        Est. 2023 Built from scratch by Adam
+        Est. 2022 Built from scratch by Adam
       </ui.p>
       <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
         <Secret
-          text="This Is Ripley, Last Survivor Of The Nostromo...Signing Off."
+          text="This is Ripley, last survivor of The Nostromo...signing off."
           slug="alien"
         />
         <Caption>Cambridge, Massachusetts, 03.14.20</Caption>

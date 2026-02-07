@@ -7,10 +7,8 @@ export default function Projects() {
     <Section
       id="projects"
       title="Projects"
-      description="Here's what I've been up to."
-      secret={
-        <Secret text="Aw man, I shot Marvin in the face!" slug="pulp-fiction" />
-      }
+      description="Some cool stuff I've built"
+      secret={<Secret text="I have friends everywhere" slug="andor-s2" />}
       secretAlign="start"
     >
       <Box vfx={{ axis: "x", wrap: true, justify: "center" }}>

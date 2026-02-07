@@ -9,7 +9,7 @@ export default function Contact() {
     <Section
       title="Contact"
       id="contact"
-      description="Connect with me."
+      description="My main info"
       secret={
         <Secret
           text="Snakes... why'd it have to be snakes?"

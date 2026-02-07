@@ -10,7 +10,7 @@ export default function About() {
     <Section
       id="about"
       title="About me"
-      description="Welcome to Adam 101."
+      description="Welcome to Adam 101"
       secret={
         <Secret text="...because my dad promised me." slug="interstellar" />
       }

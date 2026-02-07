@@ -57,7 +57,7 @@ export default function About() {
 const bios = {
   "Summer 2025": (
     <>
-      Aloha! I'm Adam Janicki, a software engineering currently on all things
+      Aloha! I'm Adam Janicki, a software engineer currently doing all things
       email & SMS at <Link to="https://stripe.com">Stripe</Link>. Since this no
       longer serves as means of showing my portfolio to potential employers, I
       try to keep this site fun for me, so keep an eye out for some hidden movie
@@ -108,7 +108,7 @@ const bios = {
       <ui.br />
       My primary hobbies outside of work mainly include athletic activities; I'm
       a former college swimmer recovering from a shoulder surgery, so I've been
-      enjoying getting into biking in running, potentially in preparation for a
+      enjoying getting into biking and running, potentially in preparation for a
       70.3 soon.
       <ui.br />
       <ui.br />

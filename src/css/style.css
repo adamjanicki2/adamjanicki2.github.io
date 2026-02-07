@@ -28,6 +28,10 @@ section {
   color: white;
 }
 
+.blur {
+  backdrop-filter: blur(4px);
+}
+
 .bordering {
   border: 2px solid orange;
 }

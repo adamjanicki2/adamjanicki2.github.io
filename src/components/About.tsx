@@ -27,9 +27,9 @@ export default function About() {
       >
         <ui.p vfx={{ fontWeight: 5 }}>Viewing bio from: </ui.p>
         <Select
-          options={Object.keys(bios)}
+          options={Object.keys(bios) as Bio[]}
           value={bio}
-          onChange={(e) => setBio(e.target.value as Bio)}
+          onSelect={setBio}
           aria-label="bio select"
         />
       </Box>

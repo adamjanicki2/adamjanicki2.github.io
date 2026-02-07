@@ -14,7 +14,7 @@ export default function Footer() {
       }}
     >
       <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
-        <ui.p vfx={{ margin: "none", fontSize: "xxs" }}>
+        <ui.p vfx={{ margin: "none", fontSize: "xxs" }} className="blur">
           Did someone say… hidden movie quotes?
         </ui.p>
         <Secret
@@ -24,7 +24,7 @@ export default function Footer() {
       </Box>
       <ui.p
         vfx={{ fontWeight: 5, radius: "rounded", padding: "xs" }}
-        style={{ backdropFilter: "blur(8px)" }}
+        className="blur"
       >
         Est. 2023 Built from scratch by Adam
       </ui.p>

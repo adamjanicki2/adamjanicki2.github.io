@@ -4,7 +4,7 @@
   "homepage": "https://adamjanicki.xyz/",
   "type": "module",
   "dependencies": {
-    "@adamjanicki/ui": "^1.8.8",
+    "@adamjanicki/ui": "^1.9.4",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },

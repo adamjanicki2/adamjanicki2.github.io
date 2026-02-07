@@ -17,7 +17,7 @@ export default function Home() {
           slug="star-wars-episode-iii-revenge-of-the-sith"
           text="Hello there!"
         />
-        <Caption>Big Sur, California, 08.06.22</Caption>
+        <Caption>Phelps Lake, Wyoming, 07.04.25</Caption>
       </Box>
     </Box>
   );

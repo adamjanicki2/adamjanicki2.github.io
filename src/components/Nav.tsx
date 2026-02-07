@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { Box, Icon, Link, ui, UnstyledLink, useScroll } from "@adamjanicki/ui";
 import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, Link, useScroll, Icon, ui } from "@adamjanicki/ui";
 import { architect } from "@adamjanicki/ui/icons";
+import { useState } from "react";
 import "src/css/nav.css";
 
 export default function Nav() {
@@ -28,9 +28,9 @@ export default function Nav() {
             onClick={() => setOpen(!open)}
             direction="right"
             size={44}
-            style={{ margin: 2 }}
+            vfx={{ margin: "xs" }}
             aria-label="toggle menu"
-            lineHeight={3}
+            barHeight={3}
           />
         </Box>
       </Box>

@@ -15,7 +15,7 @@
 }
 
 .proj-container {
-  width: 33%;
+  width: 30%;
 }
 
 .navlink-container {
@@ -25,9 +25,6 @@
 }
 
 @media (hover: hover) {
-  .accent-hover:hover {
-    color: var(--accent);
-  }
   .hidden-text:hover {
     color: inherit;
   }
@@ -38,7 +35,7 @@
     --nav-padding: 40px;
   }
   .proj-container {
-    width: 90%;
+    width: 100%;
   }
   .about-container {
     min-height: 380px;

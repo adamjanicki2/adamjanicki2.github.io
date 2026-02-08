@@ -1,5 +1,6 @@
-import { UnstyledLink } from "@adamjanicki/ui";
 import "src/css/secret.css";
+
+import { UnstyledLink } from "@adamjanicki/ui";
 
 type Props = {
   slug: string;

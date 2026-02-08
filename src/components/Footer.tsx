@@ -1,7 +1,8 @@
+import "src/css/footer.css";
+
 import { Box, ui } from "@adamjanicki/ui";
 import Caption from "src/components/Caption";
 import Secret from "src/components/Secret";
-import "src/css/footer.css";
 
 export default function Footer() {
   return (
@@ -11,26 +12,26 @@ export default function Footer() {
         align: "center",
         justify: "between",
         marginTop: "xxl",
+        padding: "s",
       }}
+      style={{ color: "white" }}
     >
-      <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
-        <ui.p vfx={{ margin: "none", fontSize: "xxs" }}>
-          Did someone say… hidden movie quotes?
-        </ui.p>
+      <Box vfx={{ axis: "x", justify: "between", width: "full" }}>
+        <Secret
+          slug="tenet"
+          text="For me, I think this is the end of a beautiful friendship"
+        />
         <Secret
           slug="the-silence-of-the-lambs"
           text="I'm having an old friend for dinner."
         />
       </Box>
-      <ui.p
-        vfx={{ fontWeight: 5, radius: "rounded", padding: "xs" }}
-        style={{ backdropFilter: "blur(8px)" }}
-      >
-        Est. 2023 Built from scratch by Adam
+      <ui.p vfx={{ fontWeight: 6, color: "default" }} className="blur">
+        Est. 2022 Built from scratch by Adam
       </ui.p>
-      <Box vfx={{ axis: "x", justify: "between", padding: "m", width: "full" }}>
+      <Box vfx={{ axis: "x", justify: "between", width: "full" }}>
         <Secret
-          text="This Is Ripley, Last Survivor Of The Nostromo...Signing Off."
+          text="This is Ripley, last survivor of The Nostromo...signing off."
           slug="alien"
         />
         <Caption>Cambridge, Massachusetts, 03.14.20</Caption>

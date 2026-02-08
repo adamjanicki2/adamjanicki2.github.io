@@ -8,10 +8,6 @@ html {
   scroll-padding-top: 80px;
 }
 
-body {
-  overscroll-behavior: none;
-}
-
 section {
   padding: var(--nav-padding) var(--nav-padding) 0 var(--nav-padding);
 }
@@ -20,14 +16,6 @@ section {
   background-color: var(--accent);
 }
 
-.accent-hover {
-  transition: color var(--aui-default-transition);
-}
-
-.white {
-  color: white;
-}
-
-.bordering {
-  border: 2px solid orange;
+.blur {
+  backdrop-filter: blur(4px);
 }

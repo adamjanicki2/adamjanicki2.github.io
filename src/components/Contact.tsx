@@ -1,15 +1,15 @@
-import Section from "src/components/Section";
+import { Box, Icon, ui, UnstyledLink } from "@adamjanicki/ui";
+import { link, newspaper, shell } from "@adamjanicki/ui/icons";
+import type { IconType } from "@adamjanicki/ui/types/icon";
 import Secret from "src/components/Secret";
-import { Box, UnstyledLink, Icon, ui } from "@adamjanicki/ui";
-import { link, shell } from "@adamjanicki/ui/icons";
-import Atom from "src/img/atom.svg?react";
+import Section from "src/components/Section";
 
 export default function Contact() {
   return (
     <Section
       title="Contact"
       id="contact"
-      description="Connect with me."
+      description="My main info"
       secret={
         <Secret
           text="Snakes... why'd it have to be snakes?"
@@ -28,46 +28,52 @@ export default function Contact() {
 }
 
 type ContactInfo = {
-  icon: React.ReactNode;
+  icon: IconType;
   to: string;
   title: string;
   description: string;
 };
 
-const CONTACTS = [
+const CONTACTS: readonly ContactInfo[] = [
   {
-    icon: <Icon icon={link} size="xxl" />,
+    icon: link,
     to: "https://www.linkedin.com/in/adam-janicki-093859197/",
     title: "LinkedIn",
     description: "Connect with me",
   },
   {
-    icon: <Icon icon={shell} size="xxl" />,
+    icon: shell,
     to: "https://github.com/adamjanicki2",
     title: "GitHub",
     description: "Check out my GitHub",
   },
   {
-    icon: <Atom height={64} />,
+    icon: newspaper,
     to: "https://adamovies.com",
     title: "Blog",
-    description: "My main updates",
+    description: "My movie reviews",
   },
-] as const;
+];
 
-const ContactLink = ({ icon, to, title, description }: ContactInfo) => (
-  <UnstyledLink
-    vfx={{ axis: "y", align: "center", margin: "s" }}
-    className="accent-hover"
-    to={to}
-    newTab
-  >
-    {icon}
-    <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
-    <ui.p
-      vfx={{ margin: "none", fontSize: "s", fontWeight: 5, color: "muted" }}
+function ContactLink({ icon, to, title, description }: ContactInfo) {
+  return (
+    <UnstyledLink
+      vfx={{ axis: "y", align: "center", margin: "s", gap: "xs", hover: "dim" }}
+      to={to}
+      newTab
     >
-      {description}
-    </ui.p>
-  </UnstyledLink>
-);
+      <Icon icon={icon} size="xxl" />
+      <ui.h2 vfx={{ margin: "none" }}>{title}</ui.h2>
+      <ui.span
+        vfx={{
+          fontSize: "s",
+          fontWeight: 6,
+          color: "muted",
+          textAlign: "center",
+        }}
+      >
+        {description}
+      </ui.span>
+    </UnstyledLink>
+  );
+}

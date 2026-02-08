@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
-import { Box, UnstyledLink, Link, useScroll, Icon, ui } from "@adamjanicki/ui";
-import { architect } from "@adamjanicki/ui/icons";
 import "src/css/nav.css";
+
+import { Box, Icon, Link, ui, UnstyledLink, useScroll } from "@adamjanicki/ui";
+import { TripleSpin as Hamburger } from "@adamjanicki/ui/components/Hamburger";
+import { architect } from "@adamjanicki/ui/icons";
+import { useState } from "react";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
-  const scrolled = scrollY >= 25;
 
   return (
-    <ui.nav className={`nav${scrolled || open ? "-scrolled" : ""}`}>
+    <ui.nav className={scrollY >= 120 || open ? "nav-scrolled" : undefined}>
       <Box
         vfx={{ axis: "x", align: "center", justify: "between" }}
         className="bar-container"
@@ -27,10 +27,9 @@ export default function Nav() {
             open={open}
             onClick={() => setOpen(!open)}
             direction="right"
-            size={44}
-            style={{ margin: 2 }}
+            size={45}
             aria-label="toggle menu"
-            lineHeight={3}
+            barHeight={3}
           />
         </Box>
       </Box>
@@ -41,9 +40,10 @@ export default function Nav() {
         {["Home", "About", "Projects", "Contact"].map((title) => (
           <Link
             key={title}
-            vfx={{ width: "full", color: "inherit" }}
+            vfx={{ width: "full", color: "inherit", radius: "subtle" }}
             to={`#${title.toLowerCase()}`}
             onClick={() => setOpen(false)}
+            className="blur"
           >
             {title}
           </Link>

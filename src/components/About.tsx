@@ -10,7 +10,7 @@ export default function About() {
     <Section
       id="about"
       title="About me"
-      description="Welcome to Adam 101."
+      description="Welcome to Adam 101"
       secret={
         <Secret text="...because my dad promised me." slug="interstellar" />
       }
@@ -23,13 +23,14 @@ export default function About() {
           justify: "center",
           marginBottom: "m",
           gap: "s",
+          wrap: true,
         }}
       >
-        <ui.p vfx={{ fontWeight: 5 }}>Viewing bio from: </ui.p>
+        <ui.span vfx={{ fontWeight: 5 }}>Viewing bio from</ui.span>
         <Select
-          options={Object.keys(bios)}
+          options={Object.keys(bios) as Bio[]}
           value={bio}
-          onChange={(e) => setBio(e.target.value as Bio)}
+          onSelect={setBio}
           aria-label="bio select"
         />
       </Box>
@@ -37,13 +38,16 @@ export default function About() {
         <ui.img
           src="/images/me.webp"
           alt=""
-          vfx={{ radius: "rounded", marginRight: "m", marginBottom: "m" }}
+          vfx={{
+            radius: "rounded",
+            border: true,
+            shadow: "subtle",
+            marginRight: "m",
+            marginBottom: "m",
+          }}
           className="about-img"
         />
-        <ui.p
-          vfx={{ margin: "none", fontSize: "m" }}
-          style={{ lineHeight: 1.5 }}
-        >
+        <ui.p vfx={{ margin: "none", fontSize: "m", lineHeight: "m" }}>
           {bios[bio]}
         </ui.p>
       </Box>
@@ -54,7 +58,7 @@ export default function About() {
 const bios = {
   "Summer 2025": (
     <>
-      Aloha! I'm Adam Janicki, a software engineering currently on all things
+      Aloha! I'm Adam Janicki, a software engineer currently doing all things
       email & SMS at <Link to="https://stripe.com">Stripe</Link>. Since this no
       longer serves as means of showing my portfolio to potential employers, I
       try to keep this site fun for me, so keep an eye out for some hidden movie
@@ -105,7 +109,7 @@ const bios = {
       <ui.br />
       My primary hobbies outside of work mainly include athletic activities; I'm
       a former college swimmer recovering from a shoulder surgery, so I've been
-      enjoying getting into biking in running, potentially in preparation for a
+      enjoying getting into biking and running, potentially in preparation for a
       70.3 soon.
       <ui.br />
       <ui.br />

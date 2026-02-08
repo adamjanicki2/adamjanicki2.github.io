@@ -16,7 +16,7 @@ export default function Footer() {
       }}
       style={{ color: "white" }}
     >
-      <Box vfx={{ axis: "x", justify: "between", width: "full", wrap: true }}>
+      <Box vfx={{ axis: "x", justify: "between", width: "full" }}>
         <Secret
           slug="tenet"
           text="For me, I think this is the end of a beautiful friendship"
@@ -29,7 +29,7 @@ export default function Footer() {
       <ui.p vfx={{ fontWeight: 6, color: "default" }} className="blur">
         Est. 2022 Built from scratch by Adam
       </ui.p>
-      <Box vfx={{ axis: "x", justify: "between", width: "full", wrap: true }}>
+      <Box vfx={{ axis: "x", justify: "between", width: "full" }}>
         <Secret
           text="This is Ripley, last survivor of The Nostromo...signing off."
           slug="alien"

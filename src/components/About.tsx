@@ -16,7 +16,7 @@ export default function About() {
       }
       secretAlign="end"
     >
-      <ui.label
+      <Box
         vfx={{
           axis: "x",
           align: "center",
@@ -33,7 +33,7 @@ export default function About() {
           onSelect={setBio}
           aria-label="bio select"
         />
-      </ui.label>
+      </Box>
       <Box className="about-container">
         <ui.img
           src="/images/me.webp"

@@ -8,7 +8,7 @@ export default function Caption(props: Props) {
   return (
     <ui.p
       vfx={{ margin: "none", fontSize: "xs", fontWeight: 7 }}
-      style={{ whiteSpace: "pre" }}
+      style={{ whiteSpace: "nowrap" }}
       className="blur"
       {...props}
     />
